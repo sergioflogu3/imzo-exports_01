@@ -8,7 +8,7 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 - `CLAUDE.md` creado con el stack, los comandos, las convenciones y las reglas de dominio.
 - `docs/constitution.md` aprobado (6 principios) y enlazado desde `CLAUDE.md`. Skill `frontend-design` y MCP `chrome-devtools` instalados.
 - Flujo SDD listo: skill `sdd` (`.agents/skills/sdd/`) y 9 comandos `/sdd-*` en `.claude/commands/`.
-- Spec `001-catalogo-productos` aprobada (36 RF). Plan y 9 tareas aprobados; T1-T10 hechas. Validación: 36/36 RF cumplidos; veredicto CAMBIOS NECESARIOS por 1 punto (línea "Copias web" del resumen no está en RF-16). Logo web: `public/logo-web.jpg` (22 KB) generado desde `logo_2.jpeg`. Principio 1 enmendado: la generación puede usar Node y herramientas de macOS (`sips`).
+- Spec `001-catalogo-productos` aprobada (36 RF). Plan y 10 tareas hechas. La generación usa `sips` en macOS o System.Drawing en Windows; `npm run catalogo` comprobado con 72 productos, 194 copias, 0 fotos con error y 0 copias pesadas. Logo web: `public/logo-web.jpg` (22 KB) generado desde `logo_2.jpeg`. Principio 1 enmendado: la generación puede usar Node y herramientas locales del sistema.
 - Fotos de producto fuera del repo: `../primera_salida/` (17 válidas + 4 sin precio) y `../segunda_salida/` (58 carpetas `<precio>_<producto>`).
 
 ## Decisiones (y por qué)
@@ -32,5 +32,4 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 
 ## Próximos pasos
 
-- Resolver el punto de la validación de la spec 001 y marcarla como "implementada".
 - Escribir las descripciones de los productos en `productos.json` y corregir erratas de nombres (p. ej. `Harry poter`).

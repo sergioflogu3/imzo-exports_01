@@ -77,7 +77,7 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 
 ### Cabecera
 
-- RF-36: EL SISTEMA muestra al inicio de la página, centrados, el logo del vendedor con un alto máximo de 120 px y, debajo, el título "Disfraces y accesorios" y el texto "Elige tu disfraz y escríbenos por WhatsApp para consultar talla y entrega.". SI no hay logo, ENTONCES muestra en su lugar el texto "IMZO".
+- RF-36: EL SISTEMA muestra al inicio de la página, centrados, el logo del vendedor con un tamaño de 300 × 250 px como máximo y, debajo, el título "Disfraces y accesorios" y el texto "Elige tu disfraz y escríbenos por WhatsApp para consultar talla y entrega.". SI no hay logo, ENTONCES muestra en su lugar el texto "IMZO".
 
 ### Pie de página y contacto
 

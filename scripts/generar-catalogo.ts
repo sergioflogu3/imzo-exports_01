@@ -14,7 +14,7 @@ import path from 'node:path';
 import type { Producto } from '../src/app/datos/producto.ts';
 import { analizarCarpeta, nombreCopia, nombreVisible, ordenarFotos } from './catalogo/carpetas.ts';
 import { fusionarCatalogo, type ProductoEscaneado } from './catalogo/fusion.ts';
-import { crearCopiaWeb, medirCopia } from './catalogo/imagenes.ts';
+import { comprobarHerramientaImagenes, crearCopiaWeb, medirCopia } from './catalogo/imagenes.ts';
 import { crearResumen, esCopiaPesada, type DatosResumen } from './catalogo/resumen.ts';
 import { leerCatalogo } from './catalogo/validacion.ts';
 
@@ -143,6 +143,13 @@ function escribirCatalogo(catalogo: readonly Producto[]): void {
 
 function generar(): void {
   const existente = leerCatalogoExistente();
+  try {
+    comprobarHerramientaImagenes();
+  } catch {
+    const herramienta = process.platform === 'win32' ? 'Windows PowerShell' : 'sips';
+    fallar(`no se encuentra la herramienta de imágenes ${herramienta}`);
+  }
+
   const resumen: DatosResumen = {
     productos: 0,
     copiasCreadas: 0,
@@ -155,7 +162,8 @@ function generar(): void {
     pesadas: [],
   };
 
-  const { catalogo, preciosCambiados } = fusionarCatalogo(existente, escanearOrigenes(resumen));
+  const escaneados = escanearOrigenes(resumen);
+  const { catalogo, preciosCambiados } = fusionarCatalogo(existente, escaneados);
   escribirCatalogo(catalogo);
   resumen.copiasBorradas = borrarCopiasSobrantes(catalogo);
   resumen.productos = catalogo.length;

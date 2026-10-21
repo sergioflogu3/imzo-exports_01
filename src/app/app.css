@@ -8,13 +8,13 @@
   text-align: center;
 }
 
-/* Centrado y con 120 px de alto como máximo (RF-36). */
+/* Logo de la cabecera: 300 × 250 px, sin deformarlo. */
 .logo {
   display: block;
-  width: auto;
-  height: auto;
-  max-height: 120px;
+  width: 300px;
+  height: 250px;
   max-width: 100%;
+  object-fit: contain;
   border-radius: var(--radio);
 }
 

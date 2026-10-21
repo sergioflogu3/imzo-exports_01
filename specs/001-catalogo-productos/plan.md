@@ -6,7 +6,7 @@ Spec: [`spec.md`](spec.md) (aprobada). Constitución: [`docs/constitution.md`](.
 
 Dos piezas que solo se comunican por archivos:
 
-1. **Generación** (Node 24 + `sips` de macOS, la ejecuta el administrador): lee `../primera_salida` y `../segunda_salida`, crea las copias web en `public/fotos/` y escribe `src/app/datos/productos.json`.
+1. **Generación** (Node 24 + `sips` en macOS o System.Drawing en Windows, la ejecuta el administrador): lee `../primera_salida` y `../segunda_salida`, crea las copias web en `public/fotos/` y escribe `src/app/datos/productos.json`.
 2. **Página** (Angular 21): importa `productos.json` en el bundle, lo ordena con funciones puras y lo pinta.
 
 ```
@@ -34,7 +34,7 @@ Dos piezas que solo se comunican por archivos:
 | `catalogo/fusion.ts` | Pura: `fusionarCatalogo(existente, escaneados)` → `{ catalogo, nuevos, quitados, preciosCambiados }`. | RF-4, RF-5, RF-6, RF-13 |
 | `catalogo/validacion.ts` | Pura: `validarCatalogo(datos)` → lista de errores con su posición (`[12].descripcion: no es texto`). | RF-15 |
 | `catalogo/resumen.ts` | Puras: `esCopiaPesada({ bytes, ancho, alto })` y `crearResumen(datos)` → texto. | RF-16, RNF-3 |
-| `catalogo/imagenes.ts` | Con efectos: `leerDimensiones(ruta)` y `crearCopiaWeb(origen, destino)` usando `sips`. | RF-9, RF-11 |
+| `catalogo/imagenes.ts` | Con efectos: `leerDimensiones(ruta)` y `crearCopiaWeb(origen, destino)` usando `sips` en macOS o System.Drawing en Windows. | RF-9, RF-11 |
 | `generar-catalogo.ts` | Orquesta: comprueba las carpetas de origen, lee el disco, llama a las funciones puras, crea y borra copias, escribe el JSON e imprime el resumen. | RF-1, RF-10, RF-11, RF-12, RF-14, RNF-7 |
 
 ### Interfaz (`src/app/`)
@@ -116,15 +116,16 @@ fusionarCatalogo(existente, escaneados):            // id = "<origen>/<carpeta>"
      para cada foto válida:                                                               (RF-9, RF-11)
        destino ← public/fotos/<origen>/<carpeta>/<nombreCopia>
        si no existe destino o mtime(original) > mtime(destino):
-         dimensiones ← leerDimensiones; si falla → "foto con error", saltar
-         crearCopiaWeb: sips a JPEG calidad 80; -Z 1200 SOLO si el lado mayor > 1200
-         si la copia pasa de 300 KB → repetir con calidad 65, luego 50 y luego 40
+        dimensiones ← leerDimensiones; si falla → "foto con error", saltar
+        crearCopiaWeb: convertir a JPEG calidad 80; limitar a 1200 px si el lado mayor lo supera
+        si la copia pasa de 300 KB → repetir con calidad 65, luego 50 y luego 40
        medir copia → si esCopiaPesada → "pesada"
      si no queda ninguna foto legible → "sin fotos", no se añade                           (RF-10)
      si no tiene1jpeg → "sin 1.jpeg"
 4. fusionarCatalogo; escribir productos.json (orden de precio desc, con 2 espacios).       (RF-1, RF-6, RF-13)
 5. Borrar en public/fotos/ todo lo que no sea copia de un producto del catálogo.           (RF-12)
 6. Imprimir crearResumen.                                                                   (RF-16)
+
 ```
 
 Nunca se escribe ni se borra nada fuera de `public/fotos/` y `productos.json` (RNF-7).
@@ -142,8 +143,8 @@ ordenarPorPrecioDesc(productos) = copia ordenada por (b.precio − a.precio), y 
 - **Detalle** (RF-22 a RF-28): `<dialog>` con `showModal()`, que ya incluye Escape, foco atrapado y el resto de la página inerte. Pulsar fuera se detecta con un clic cuyo `target` es el propio `<dialog>`. La página de detrás se bloquea con `body:has(dialog[open]) { overflow: hidden }`. Al cerrar, el foco vuelve a la tarjeta. La foto grande usa `object-fit: contain`. La descripción usa `white-space: pre-line` y la ventana tiene `overflow: auto`.
 - **Fotos secundarias** (RNF-4): las miniaturas y la foto grande solo existen en el DOM mientras el detalle está abierto (`@if`).
 - **Error de foto** (RF-31): un `(error)` en la `<img>` activa un `signal` que la cambia por el recuadro gris.
-- **Cabecera** (RF-36): logo de `LOGO` (la copia ligera `public/logo-web.jpg`, 256 px de alto) con `height: 120px` como máximo, `fetchpriority="high"` porque está arriba, y título y bajada con `text-align: center`.
-- **Pie de página y WhatsApp** (RF-32 a RF-35): el botón con `position: fixed` y `padding-bottom` en el pie igual a su alto más un margen. Enlaces con `target="_blank" rel="noopener noreferrer"`.
+- **Cabecera** (RF-36): logo de `LOGO` (la copia ligera `public/logo-web.jpg`) con un tamaño máximo de `300 × 250px`, `fetchpriority="high"` porque está arriba, y título y bajada con `text-align: center`.
+- **Pie de página y WhatsApp** (RF-32 a RF-35): el botón con `position: fixed` abajo a la izquierda y `padding-bottom` en el pie igual a su alto más un margen. Enlaces con `target="_blank" rel="noopener noreferrer"`.
 - **Diseño visual**: se decide en T7 con la skill `frontend-design`. Tipografías del sistema o archivos de fuente dentro de la app: nunca de Google Fonts (RNF-1).
 
 ## Decisiones (y alternativa descartada)

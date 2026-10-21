@@ -25,10 +25,15 @@ Todos se ejecutan desde `imzo_venta/`:
 ```bash
 npm install          # instalar dependencias
 npm start            # ng serve → http://localhost:4200
+npm run catalogo     # generar las copias web y actualizar productos.json
 npm run build        # build de producción en dist/
 npm run watch        # build de desarrollo en modo watch
 npx prettier --write "src/**/*.{ts,html,css}"   # formatear
 ```
+
+`npm run catalogo` necesita `../primera_salida/` y `../segunda_salida/`. En macOS usa `sips`;
+en Windows usa System.Drawing, incluido en Windows PowerShell. Las copias se generan en
+`public/fotos/`, que está fuera de git y debe regenerarse después de descargar el repositorio.
 
 - Tests: `node --test`
 

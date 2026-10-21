@@ -40,4 +40,4 @@ Spec: [`spec.md`](spec.md) · Plan: [`plan.md`](plan.md)
 
 - [x] **T10. Logo y cabecera centrados.** RF-36
   - Mostrar el logo (o "IMZO" si no hay) al inicio de `app.html`, centrado, con título y bajada también centrados.
-  - Hecho cuando: con Chrome a 375 y 1280 px, el logo se ve centrado con 120 px de alto como máximo, el título y la bajada están centrados, no hay scroll horizontal y la consola está limpia.
+  - Hecho cuando: con Chrome a 375 y 1280 px, el logo se ve centrado con un tamaño máximo de 300 × 250 px, el título y la bajada están centrados, no hay scroll horizontal y la consola está limpia.

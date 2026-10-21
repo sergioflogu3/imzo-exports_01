@@ -1,7 +1,7 @@
-/* Fijo abajo a la derecha (RF-34). El pie de página reserva su hueco (RF-35). */
+/* Fijo abajo a la izquierda (RF-34). El pie de página reserva su hueco (RF-35). */
 .boton {
   position: fixed;
-  right: var(--margen);
+  left: var(--margen);
   bottom: var(--margen);
   z-index: 10;
   display: inline-flex;
