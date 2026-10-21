@@ -1,0 +1,64 @@
+.pie {
+  background: var(--tinta);
+  color: var(--fondo);
+}
+
+/* El padding inferior deja hueco al botón de WhatsApp (56 px + márgenes, RF-35). */
+.interior {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px var(--margen) 104px;
+}
+
+.logo {
+  display: block;
+  height: 64px;
+  width: auto;
+  border-radius: var(--radio);
+}
+
+.logo-texto {
+  margin: 0;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+}
+
+.redes {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.redes a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgb(244 242 248 / 0.4);
+  border-radius: 22px;
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.redes a:hover {
+  border-color: var(--fondo);
+}
+
+.redes svg {
+  width: 20px;
+  height: 20px;
+}
+
+.redes a:focus-visible {
+  outline-color: var(--etiqueta);
+}

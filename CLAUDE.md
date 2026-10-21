@@ -16,8 +16,7 @@ Catálogo web minimalista de disfraces y accesorios de IMZO (Halloween, Navidad,
 - `public/`: los archivos estáticos que se sirven tal cual (favicon e imágenes). **Solo lo que esté aquí** llega al build.
 - `.vscode/mcp.json`: el servidor MCP del Angular CLI (`npx @angular/cli mcp`).
 - Datos de producto, **fuera del repo**, en la carpeta padre (`../`):
-  - `../primera_salida/<producto>/`: las fotos de la primera tanda, sin precio.
-  - `../segunda_salida/<precio>_<producto>/`: las fotos de la segunda tanda. El prefijo numérico de la carpeta es el **precio** (p. ej. `90_mario`, `350_grinch`). Hay una foto real (`<precio>_WhatsApp Image ….jpeg`) y varias generadas (`Gemini_Generated_Image_….jpeg`).
+  - `../primera_salida/` y `../segunda_salida/`: una carpeta por producto, `<precio>_<producto>/`. El prefijo numérico de la carpeta es el **precio** (p. ej. `90_mario`, `350_grinch`). Hay una foto real (`<precio>_WhatsApp Image ….jpeg`) y varias generadas (`Gemini_Generated_Image_….jpeg`).
 
 ## Comandos
 
@@ -56,7 +55,7 @@ No hay linter configurado (no existe `ng lint`). Si hace falta uno, pregunta ant
 ## Reglas de dominio / trampas conocidas
 
 - **El precio sale del nombre de la carpeta** en `segunda_salida` (el número antes del primer `_`). La moneda no está indicada: no la supongas, pregunta.
-- En `primera_salida` las carpetas **no tienen precio**: no inventes uno.
+- Las carpetas sin el formato `<precio>_<producto>` (p. ej. `cruela`) **no están disponibles**: no inventes un precio.
 - Algunos nombres tienen erratas o son coloquiales (`geurrera`, `calabera`, `harry_poter_2`, `winchas`). Para mostrarlos al cliente hay que limpiarlos, pero **no se renombran las carpetas originales** sin permiso.
 - Hay productos con el mismo nombre y distinto precio (`50_calaca` / `95_calaca`, `45_mascara` / `50_mascara`): son productos distintos y no se deben fusionar.
 - Las fotos están fuera de `public/`, así que Angular no las sirve. Para usarlas hay que copiarlas u optimizarlas dentro de `public/` (y eso conviene preguntarlo primero).

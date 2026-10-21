@@ -1,0 +1,20 @@
+@if (productos.length > 0) {
+  <ul class="cuadricula">
+    @for (producto of productos; track producto.id) {
+      <li>
+        <app-tarjeta-producto
+          [producto]="producto"
+          [prioritaria]="$index < 8"
+          (abrir)="abierto.set($event)"
+        />
+      </li>
+    }
+  </ul>
+} @else {
+  <p class="vacio">Todavía no hay productos. Escríbenos por WhatsApp para consultar.</p>
+}
+
+<!-- El detalle solo existe abierto: sus fotos no se piden antes (RNF-4). -->
+@if (abierto(); as producto) {
+  <app-detalle-producto [producto]="producto" (cerrar)="cerrar()" />
+}

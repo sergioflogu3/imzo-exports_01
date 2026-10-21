@@ -1,0 +1,54 @@
+<dialog
+  #dialogo
+  class="dialogo"
+  aria-labelledby="titulo-detalle"
+  (close)="cerrar.emit()"
+  (click)="alPulsarDialogo($event)"
+>
+  <div class="contenido">
+    <button type="button" class="cerrar" (click)="cerrarDialogo()">Cerrar</button>
+
+    @if (fotosFallidas().has(seleccionada())) {
+      <div class="foto-grande foto-fallida">{{ producto().nombre }}</div>
+    } @else {
+      <img
+        class="foto-grande"
+        [src]="fotoGrande()"
+        [alt]="producto().nombre"
+        (error)="marcarFallida(seleccionada())"
+      />
+    }
+
+    <ul class="miniaturas">
+      @for (foto of producto().fotografias; track foto; let i = $index) {
+        <li>
+          <button
+            type="button"
+            class="miniatura"
+            [attr.aria-pressed]="i === seleccionada()"
+            [attr.aria-label]="'Ver foto ' + (i + 1) + ' de ' + producto().fotografias.length"
+            (click)="seleccionada.set(i)"
+          >
+            @if (fotosFallidas().has(i)) {
+              <span class="miniatura-fallida"></span>
+            } @else {
+              <img
+                [src]="foto"
+                [alt]="producto().nombre + ', foto ' + (i + 1)"
+                (error)="marcarFallida(i)"
+              />
+            }
+          </button>
+        </li>
+      }
+    </ul>
+
+    <h2 id="titulo-detalle" class="nombre">{{ producto().nombre }}</h2>
+    <p class="precio">{{ formatearPrecio(producto().precio) }}</p>
+    @if (tieneDescripcion()) {
+      <p class="descripcion">{{ producto().descripcion }}</p>
+    }
+  </div>
+  <!-- El diálogo modal tapa el botón de la página: se repite aquí (RF-34). -->
+  <app-boton-whatsapp />
+</dialog>

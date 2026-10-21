@@ -1,0 +1,46 @@
+.cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px var(--margen) 32px;
+  text-align: center;
+}
+
+/* Centrado y con 120 px de alto como máximo (RF-36). */
+.logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 120px;
+  max-width: 100%;
+  border-radius: var(--radio);
+}
+
+.marca {
+  margin: 0;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+}
+
+.titular {
+  margin: 20px 0 4px;
+  font-size: clamp(1.75rem, 6vw, 2.75rem);
+  line-height: 1.1;
+  font-weight: 800;
+  text-wrap: balance;
+}
+
+.bajada {
+  margin: 0;
+  max-width: 60ch;
+  color: var(--tinta-suave);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--margen) 48px;
+}

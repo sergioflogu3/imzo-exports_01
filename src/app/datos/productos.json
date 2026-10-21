@@ -1,0 +1,1013 @@
+[
+  {
+    "id": "primera_salida/380_dinosaurios",
+    "origen": "primera_salida",
+    "carpeta": "380_dinosaurios",
+    "nombre": "Dinosaurios",
+    "precio": 380,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/380_dinosaurios/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/380_dinosaurios/1-jpeg.jpg",
+      "fotos/primera_salida/380_dinosaurios/gemini-generated-image-iaw3r4iaw3r4iaw3-jpeg.jpg",
+      "fotos/primera_salida/380_dinosaurios/gemini-generated-image-o6jevo6jevo6jevo-jpeg.jpg",
+      "fotos/primera_salida/380_dinosaurios/inflable-rojo-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/350_grinch",
+    "origen": "segunda_salida",
+    "carpeta": "350_grinch",
+    "nombre": "Grinch",
+    "precio": 350,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/350_grinch/1-png.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/350_grinch/1-png.jpg",
+      "fotos/segunda_salida/350_grinch/grinch-santa-costume-studio-portrait-png.jpg",
+      "fotos/segunda_salida/350_grinch/santa-grinch-costume-set-display-png.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/280_dino_peque",
+    "origen": "segunda_salida",
+    "carpeta": "280_dino_peque",
+    "nombre": "Dino peque",
+    "precio": 280,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/280_dino_peque/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/280_dino_peque/1-jpeg.jpg",
+      "fotos/segunda_salida/280_dino_peque/gemini-generated-image-ifqjo2ifqjo2ifqj-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/250_dinosaurio",
+    "origen": "segunda_salida",
+    "carpeta": "250_dinosaurio",
+    "nombre": "Dinosaurio",
+    "precio": 250,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/250_dinosaurio/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/250_dinosaurio/1-jpeg.jpg",
+      "fotos/segunda_salida/250_dinosaurio/gemini-generated-image-bnppimbnppimbnpp-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/220_ghost-rider",
+    "origen": "segunda_salida",
+    "carpeta": "220_ghost-rider",
+    "nombre": "Ghost rider",
+    "precio": 220,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/220_ghost-rider/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/220_ghost-rider/1-jpeg.jpg",
+      "fotos/segunda_salida/220_ghost-rider/ghost-rider-alterna-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/200_zumo",
+    "origen": "segunda_salida",
+    "carpeta": "200_zumo",
+    "nombre": "Zumo",
+    "precio": 200,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/200_zumo/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/200_zumo/1-jpeg.jpg",
+      "fotos/segunda_salida/200_zumo/gemini-generated-image-ifrjprifrjprifrj-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/190_lord_forkuat",
+    "origen": "primera_salida",
+    "carpeta": "190_lord_forkuat",
+    "nombre": "Lord forkuat",
+    "precio": 190,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/190_lord_forkuat/1-png.jpg",
+    "fotografias": [
+      "fotos/primera_salida/190_lord_forkuat/1-png.jpg",
+      "fotos/primera_salida/190_lord_forkuat/designer-png.jpg",
+      "fotos/primera_salida/190_lord_forkuat/lord-farkuat-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/180_mamanuela",
+    "origen": "segunda_salida",
+    "carpeta": "180_mamanuela",
+    "nombre": "Mamanuela",
+    "precio": 180,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/180_mamanuela/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/180_mamanuela/1-jpeg.jpg",
+      "fotos/segunda_salida/180_mamanuela/gemini-generated-image-281bj7281bj7281b-jpeg.jpg",
+      "fotos/segunda_salida/180_mamanuela/gemini-generated-image-vol8zlvol8zlvol8-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/180_papanoel",
+    "origen": "segunda_salida",
+    "carpeta": "180_papanoel",
+    "nombre": "Papanoel",
+    "precio": 180,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/180_papanoel/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/180_papanoel/1-jpeg.jpg",
+      "fotos/segunda_salida/180_papanoel/gemini-generated-image-r1leqlr1leqlr1le-jpeg.jpg",
+      "fotos/segunda_salida/180_papanoel/gemini-generated-image-v9na9pv9na9pv9na-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/170_harry-potter",
+    "origen": "segunda_salida",
+    "carpeta": "170_harry-potter",
+    "nombre": "Harry potter",
+    "precio": 170,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/170_harry-potter/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/170_harry-potter/1-jpeg.jpg",
+      "fotos/segunda_salida/170_harry-potter/gemini-generated-image-b7lf6eb7lf6eb7lf-jpeg.jpg",
+      "fotos/segunda_salida/170_harry-potter/gemini-generated-image-y98k4xy98k4xy98k-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/150_elf",
+    "origen": "segunda_salida",
+    "carpeta": "150_elf",
+    "nombre": "Elf",
+    "precio": 150,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/150_elf/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/150_elf/1-jpeg.jpg",
+      "fotos/segunda_salida/150_elf/gemini-generated-image-b2pud8b2pud8b2pu-jpeg.jpg",
+      "fotos/segunda_salida/150_elf/gemini-generated-image-i1ke5zi1ke5zi1ke-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/150_messi",
+    "origen": "segunda_salida",
+    "carpeta": "150_messi",
+    "nombre": "Messi",
+    "precio": 150,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/150_messi/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/150_messi/1-jpeg.jpg",
+      "fotos/segunda_salida/150_messi/gemini-generated-image-ul8w03ul8w03ul8w-jpeg.jpg",
+      "fotos/segunda_salida/150_messi/gemini-generated-image-xlolyzxlolyzxlol-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/140_dark_doll",
+    "origen": "segunda_salida",
+    "carpeta": "140_dark_doll",
+    "nombre": "Dark doll",
+    "precio": 140,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/140_dark_doll/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/140_dark_doll/1-jpeg.jpg",
+      "fotos/segunda_salida/140_dark_doll/gemini-generated-image-fhc32ffhc32ffhc3-jpeg.jpg",
+      "fotos/segunda_salida/140_dark_doll/gemini-generated-image-ocef0bocef0bocef-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/110_rapera",
+    "origen": "segunda_salida",
+    "carpeta": "110_rapera",
+    "nombre": "Rapera",
+    "precio": 110,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/110_rapera/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/110_rapera/1-jpeg.jpg",
+      "fotos/segunda_salida/110_rapera/gemini-generated-image-bq8wpfbq8wpfbq8w-jpeg.jpg",
+      "fotos/segunda_salida/110_rapera/gemini-generated-image-v92udgv92udgv92u-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/95_calaca",
+    "origen": "segunda_salida",
+    "carpeta": "95_calaca",
+    "nombre": "Calaca",
+    "precio": 95,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/95_calaca/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/95_calaca/1-jpeg.jpg",
+      "fotos/segunda_salida/95_calaca/captura-de-pantalla-2026-10-18-a-la-s-4-03-59-p-m-png.jpg",
+      "fotos/segunda_salida/95_calaca/gemini-generated-image-t8kouat8kouat8ko-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/90_lobita",
+    "origen": "segunda_salida",
+    "carpeta": "90_lobita",
+    "nombre": "Lobita",
+    "precio": 90,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/90_lobita/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/90_lobita/1-jpeg.jpg",
+      "fotos/segunda_salida/90_lobita/gemini-generated-image-5wjb5wjb5wjb5wjb-jpeg.jpg",
+      "fotos/segunda_salida/90_lobita/gemini-generated-image-yususfyususfyusu-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/90_mario",
+    "origen": "segunda_salida",
+    "carpeta": "90_mario",
+    "nombre": "Mario",
+    "precio": 90,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/90_mario/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/90_mario/1-jpeg.jpg",
+      "fotos/segunda_salida/90_mario/gemini-generated-image-fn2zkffn2zkffn2z-jpeg.jpg",
+      "fotos/segunda_salida/90_mario/gemini-generated-image-ywul8nywul8nywul-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/90_spiderman",
+    "origen": "segunda_salida",
+    "carpeta": "90_spiderman",
+    "nombre": "Spiderman",
+    "precio": 90,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/90_spiderman/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/90_spiderman/1-jpeg.jpg",
+      "fotos/segunda_salida/90_spiderman/gemini-generated-image-rq5xofrq5xofrq5x-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/90_vaquera",
+    "origen": "segunda_salida",
+    "carpeta": "90_vaquera",
+    "nombre": "Vaquera",
+    "precio": 90,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/90_vaquera/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/90_vaquera/1-jpeg.jpg",
+      "fotos/segunda_salida/90_vaquera/gemini-generated-image-rj1aiyrj1aiyrj1a-jpeg.jpg",
+      "fotos/segunda_salida/90_vaquera/gemini-generated-image-wixay0wixay0wixa-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/80_casa-papel",
+    "origen": "segunda_salida",
+    "carpeta": "80_casa-papel",
+    "nombre": "Casa papel",
+    "precio": 80,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/80_casa-papel/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/80_casa-papel/1-jpeg.jpg",
+      "fotos/segunda_salida/80_casa-papel/gemini-generated-image-4znj214znj214znj-jpeg.jpg",
+      "fotos/segunda_salida/80_casa-papel/gemini-generated-image-acrfruacrfruacrf-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/80_pastor",
+    "origen": "segunda_salida",
+    "carpeta": "80_pastor",
+    "nombre": "Pastor",
+    "precio": 80,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/80_pastor/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/80_pastor/1-jpeg.jpg",
+      "fotos/segunda_salida/80_pastor/gemini-generated-image-pnsactpnsactpnsa-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/80_vaquero",
+    "origen": "segunda_salida",
+    "carpeta": "80_vaquero",
+    "nombre": "Vaquero",
+    "precio": 80,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/80_vaquero/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/80_vaquero/1-jpeg.jpg",
+      "fotos/segunda_salida/80_vaquero/captura-de-pantalla-2026-10-18-a-la-s-4-06-43-p-m-png.jpg",
+      "fotos/segunda_salida/80_vaquero/gemini-generated-image-kitz8ukitz8ukitz-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/75_angela_2",
+    "origen": "primera_salida",
+    "carpeta": "75_angela_2",
+    "nombre": "Angela 2",
+    "precio": 75,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/75_angela_2/1-png.jpg",
+    "fotografias": [
+      "fotos/primera_salida/75_angela_2/1-png.jpg",
+      "fotos/primera_salida/75_angela_2/angela-2-2-jpeg.jpg",
+      "fotos/primera_salida/75_angela_2/angelita-3-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/70_cachorros",
+    "origen": "segunda_salida",
+    "carpeta": "70_cachorros",
+    "nombre": "Cachorros",
+    "precio": 70,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/70_cachorros/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/70_cachorros/1-jpeg.jpg",
+      "fotos/segunda_salida/70_cachorros/gemini-generated-image-mqez5kmqez5kmqez-jpeg.jpg",
+      "fotos/segunda_salida/70_cachorros/gemini-generated-image-vkssltvkssltvkss-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/70_guerrera",
+    "origen": "primera_salida",
+    "carpeta": "70_guerrera",
+    "nombre": "Guerrera",
+    "precio": 70,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/70_guerrera/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/70_guerrera/1-jpeg.jpg",
+      "fotos/primera_salida/70_guerrera/gemini-generated-image-yqy1mzyqy1mzyqy1-jpeg.jpg",
+      "fotos/primera_salida/70_guerrera/guerrera-kpop-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/70_indio",
+    "origen": "segunda_salida",
+    "carpeta": "70_indio",
+    "nombre": "Indio",
+    "precio": 70,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/70_indio/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/70_indio/1-jpeg.jpg",
+      "fotos/segunda_salida/70_indio/gemini-generated-image-u5khqku5khqku5kh-jpeg.jpg",
+      "fotos/segunda_salida/70_indio/gemini-generated-image-zhfuotzhfuotzhfu-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/65_diablita",
+    "origen": "segunda_salida",
+    "carpeta": "65_diablita",
+    "nombre": "Diablita",
+    "precio": 65,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/65_diablita/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/65_diablita/1-jpeg.jpg",
+      "fotos/segunda_salida/65_diablita/gemini-generated-image-h14zlzh14zlzh14z-jpeg.jpg",
+      "fotos/segunda_salida/65_diablita/gemini-generated-image-nn3ig6nn3ig6nn3i-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/65_harry-hermonie",
+    "origen": "segunda_salida",
+    "carpeta": "65_harry-hermonie",
+    "nombre": "Harry hermonie",
+    "precio": 65,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/65_harry-hermonie/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/65_harry-hermonie/1-jpeg.jpg",
+      "fotos/segunda_salida/65_harry-hermonie/gemini-generated-image-odk6dlodk6dlodk6-jpeg.jpg",
+      "fotos/segunda_salida/65_harry-hermonie/gemini-generated-image-q9zo4q9zo4q9zo4q-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/65_peluca_viejo",
+    "origen": "segunda_salida",
+    "carpeta": "65_peluca_viejo",
+    "nombre": "Peluca viejo",
+    "precio": 65,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/65_peluca_viejo/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/65_peluca_viejo/1-jpeg.jpg",
+      "fotos/segunda_salida/65_peluca_viejo/gemini-generated-image-i72m3pi72m3pi72m-jpeg.jpg",
+      "fotos/segunda_salida/65_peluca_viejo/gemini-generated-image-z3ok4hz3ok4hz3ok-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/60_angela_1",
+    "origen": "primera_salida",
+    "carpeta": "60_angela_1",
+    "nombre": "Angela 1",
+    "precio": 60,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/60_angela_1/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/60_angela_1/1-jpeg.jpg",
+      "fotos/primera_salida/60_angela_1/angela-1-1-png.jpg",
+      "fotos/primera_salida/60_angela_1/angela-1-2-png.jpg",
+      "fotos/primera_salida/60_angela_1/angela-1-3-jpeg.jpg",
+      "fotos/primera_salida/60_angela_1/angelita-1-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/60_angelita",
+    "origen": "segunda_salida",
+    "carpeta": "60_angelita",
+    "nombre": "Angelita",
+    "precio": 60,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/60_angelita/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/60_angelita/1-jpeg.jpg",
+      "fotos/segunda_salida/60_angelita/gemini-generated-image-fofcoifofcoifofc-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/60_barbie",
+    "origen": "segunda_salida",
+    "carpeta": "60_barbie",
+    "nombre": "Barbie",
+    "precio": 60,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/60_barbie/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/60_barbie/1-jpeg.jpg",
+      "fotos/segunda_salida/60_barbie/gemini-generated-image-mz2drbmz2drbmz2d-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/60_elfa",
+    "origen": "segunda_salida",
+    "carpeta": "60_elfa",
+    "nombre": "Elfa",
+    "precio": 60,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/60_elfa/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/60_elfa/1-jpeg.jpg",
+      "fotos/segunda_salida/60_elfa/gemini-generated-image-do6brmdo6brmdo6b-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/60_elvis",
+    "origen": "segunda_salida",
+    "carpeta": "60_elvis",
+    "nombre": "Elvis",
+    "precio": 60,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/60_elvis/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/60_elvis/1-jpeg.jpg",
+      "fotos/segunda_salida/60_elvis/gemini-generated-image-t2v235t2v235t2v2-jpeg.jpg",
+      "fotos/segunda_salida/60_elvis/gemini-generated-image-y3cnnzy3cnnzy3cn-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/60_harley_quinn",
+    "origen": "segunda_salida",
+    "carpeta": "60_harley_quinn",
+    "nombre": "Harley quinn",
+    "precio": 60,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/60_harley_quinn/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/60_harley_quinn/1-jpeg.jpg",
+      "fotos/segunda_salida/60_harley_quinn/gemini-generated-image-pfu4uupfu4uupfu4-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/60_hippie",
+    "origen": "segunda_salida",
+    "carpeta": "60_hippie",
+    "nombre": "Hippie",
+    "precio": 60,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/60_hippie/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/60_hippie/1-jpeg.jpg",
+      "fotos/segunda_salida/60_hippie/gemini-generated-image-hdi7g3hdi7g3hdi7-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/60_novia-sangrienta",
+    "origen": "segunda_salida",
+    "carpeta": "60_novia-sangrienta",
+    "nombre": "Novia sangrienta",
+    "precio": 60,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/60_novia-sangrienta/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/60_novia-sangrienta/1-jpeg.jpg",
+      "fotos/segunda_salida/60_novia-sangrienta/captura-de-pantalla-2026-10-18-a-la-s-5-40-27-p-m-png.jpg",
+      "fotos/segunda_salida/60_novia-sangrienta/gemini-generated-image-hncau4hncau4hnca-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/60_traje",
+    "origen": "segunda_salida",
+    "carpeta": "60_traje",
+    "nombre": "Traje",
+    "precio": 60,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/60_traje/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/60_traje/1-jpeg.jpg",
+      "fotos/segunda_salida/60_traje/gemini-generated-image-kc48wwkc48wwkc48-jpeg.jpg",
+      "fotos/segunda_salida/60_traje/gemini-generated-image-om25taom25taom25-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/60_traje_ejercicio",
+    "origen": "segunda_salida",
+    "carpeta": "60_traje_ejercicio",
+    "nombre": "Traje ejercicio",
+    "precio": 60,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/60_traje_ejercicio/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/60_traje_ejercicio/1-jpeg.jpg",
+      "fotos/segunda_salida/60_traje_ejercicio/gemini-generated-image-jnbu81jnbu81jnbu-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/55_selena",
+    "origen": "primera_salida",
+    "carpeta": "55_selena",
+    "nombre": "Selena",
+    "precio": 55,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/55_selena/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/55_selena/1-jpeg.jpg",
+      "fotos/primera_salida/55_selena/gemini-generated-image-37rn3337rn3337rn-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/50_bruja",
+    "origen": "segunda_salida",
+    "carpeta": "50_bruja",
+    "nombre": "Bruja",
+    "precio": 50,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/50_bruja/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/50_bruja/1-jpeg.jpg",
+      "fotos/segunda_salida/50_bruja/captura-de-pantalla-2026-10-18-a-la-s-4-14-06-p-m-png.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/50_calabazita",
+    "origen": "primera_salida",
+    "carpeta": "50_calabazita",
+    "nombre": "Calabazita",
+    "precio": 50,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/50_calabazita/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/50_calabazita/1-jpeg.jpg",
+      "fotos/primera_salida/50_calabazita/gemini-generated-image-5mj1035mj1035mj1-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/50_calabera",
+    "origen": "primera_salida",
+    "carpeta": "50_calabera",
+    "nombre": "Calabera",
+    "precio": 50,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/50_calabera/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/50_calabera/1-jpeg.jpg",
+      "fotos/primera_salida/50_calabera/gemini-generated-image-1by2ez1by2ez1by2-jpeg.jpg",
+      "fotos/primera_salida/50_calabera/gemini-generated-image-kkx6ikkx6ikkx6ik-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/50_calaca",
+    "origen": "segunda_salida",
+    "carpeta": "50_calaca",
+    "nombre": "Calaca",
+    "precio": 50,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/50_calaca/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/50_calaca/1-jpeg.jpg",
+      "fotos/segunda_salida/50_calaca/gemini-generated-image-hs2b1ohs2b1ohs2b-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/50_cientifico",
+    "origen": "primera_salida",
+    "carpeta": "50_cientifico",
+    "nombre": "Cientifico",
+    "precio": 50,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/50_cientifico/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/50_cientifico/1-jpeg.jpg",
+      "fotos/primera_salida/50_cientifico/gemini-generated-image-1mfqj91mfqj91mfq-jpeg.jpg",
+      "fotos/primera_salida/50_cientifico/gemini-generated-image-4v6hny4v6hny4v6h-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/50_hada",
+    "origen": "segunda_salida",
+    "carpeta": "50_hada",
+    "nombre": "Hada",
+    "precio": 50,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/50_hada/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/50_hada/1-jpeg.jpg",
+      "fotos/segunda_salida/50_hada/gemini-generated-image-rhlsmnrhlsmnrhls-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/50_india",
+    "origen": "segunda_salida",
+    "carpeta": "50_india",
+    "nombre": "India",
+    "precio": 50,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/50_india/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/50_india/1-jpeg.jpg",
+      "fotos/segunda_salida/50_india/gemini-generated-image-3kg13o3kg13o3kg1-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/50_mascara",
+    "origen": "segunda_salida",
+    "carpeta": "50_mascara",
+    "nombre": "Mascara",
+    "precio": 50,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/50_mascara/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/50_mascara/1-jpeg.jpg",
+      "fotos/segunda_salida/50_mascara/alterna-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/50_mostacho",
+    "origen": "primera_salida",
+    "carpeta": "50_mostacho",
+    "nombre": "Mostacho",
+    "precio": 50,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/50_mostacho/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/50_mostacho/1-jpeg.jpg",
+      "fotos/primera_salida/50_mostacho/gemini-generated-image-terc1wterc1wterc-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/50_vestido",
+    "origen": "segunda_salida",
+    "carpeta": "50_vestido",
+    "nombre": "Vestido",
+    "precio": 50,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/50_vestido/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/50_vestido/1-jpeg.jpg",
+      "fotos/segunda_salida/50_vestido/gemini-generated-image-gti8sggti8sggti8-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/45_mascara",
+    "origen": "segunda_salida",
+    "carpeta": "45_mascara",
+    "nombre": "Mascara",
+    "precio": 45,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/45_mascara/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/45_mascara/1-jpeg.jpg",
+      "fotos/segunda_salida/45_mascara/gemini-generated-image-b0ibd8b0ibd8b0ib-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/45_militar",
+    "origen": "primera_salida",
+    "carpeta": "45_militar",
+    "nombre": "Militar",
+    "precio": 45,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/45_militar/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/45_militar/1-jpeg.jpg",
+      "fotos/primera_salida/45_militar/gemini-generated-image-5i91b5i91b5i91b5-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/45_mono",
+    "origen": "segunda_salida",
+    "carpeta": "45_mono",
+    "nombre": "Mono",
+    "precio": 45,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/45_mono/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/45_mono/1-jpeg.jpg",
+      "fotos/segunda_salida/45_mono/gemini-generated-image-vul1t1vul1t1vul1-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/45_senora-medieval",
+    "origen": "segunda_salida",
+    "carpeta": "45_senora-medieval",
+    "nombre": "Senora medieval",
+    "precio": 45,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/45_senora-medieval/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/45_senora-medieval/1-jpeg.jpg",
+      "fotos/segunda_salida/45_senora-medieval/gemini-generated-image-kwl7ykkwl7ykkwl7-jpeg.jpg",
+      "fotos/segunda_salida/45_senora-medieval/gemini-generated-image-w85ucyw85ucyw85u-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/40_chaleco_perrito",
+    "origen": "segunda_salida",
+    "carpeta": "40_chaleco_perrito",
+    "nombre": "Chaleco perrito",
+    "precio": 40,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/40_chaleco_perrito/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/40_chaleco_perrito/1-jpeg.jpg",
+      "fotos/segunda_salida/40_chaleco_perrito/gemini-generated-image-1z1rcj1z1rcj1z1r-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/40_conejita",
+    "origen": "primera_salida",
+    "carpeta": "40_conejita",
+    "nombre": "Conejita",
+    "precio": 40,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/40_conejita/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/40_conejita/1-jpeg.jpg",
+      "fotos/primera_salida/40_conejita/gemini-generated-image-xsm479xsm479xsm4-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/40_dinosaurio",
+    "origen": "primera_salida",
+    "carpeta": "40_dinosaurio",
+    "nombre": "Dinosaurio",
+    "precio": 40,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/40_dinosaurio/1-png.jpg",
+    "fotografias": [
+      "fotos/primera_salida/40_dinosaurio/1-png.jpg",
+      "fotos/primera_salida/40_dinosaurio/dinosuario-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/40_marino",
+    "origen": "segunda_salida",
+    "carpeta": "40_marino",
+    "nombre": "Marino",
+    "precio": 40,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/40_marino/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/40_marino/1-jpeg.jpg",
+      "fotos/segunda_salida/40_marino/gemini-generated-image-5rigtn5rigtn5rig-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/40_rey",
+    "origen": "segunda_salida",
+    "carpeta": "40_rey",
+    "nombre": "Rey",
+    "precio": 40,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/40_rey/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/40_rey/1-jpeg.jpg",
+      "fotos/segunda_salida/40_rey/gemini-generated-image-6hmv9r6hmv9r6hmv-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/35_gorro_arbol",
+    "origen": "segunda_salida",
+    "carpeta": "35_gorro_arbol",
+    "nombre": "Gorro arbol",
+    "precio": 35,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/35_gorro_arbol/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/35_gorro_arbol/1-jpeg.jpg",
+      "fotos/segunda_salida/35_gorro_arbol/gemini-generated-image-rpa9carpa9carpa9-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/30_vestido",
+    "origen": "primera_salida",
+    "carpeta": "30_vestido",
+    "nombre": "Vestido",
+    "precio": 30,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/30_vestido/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/30_vestido/1-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/25_antifaz",
+    "origen": "segunda_salida",
+    "carpeta": "25_antifaz",
+    "nombre": "Antifaz",
+    "precio": 25,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/25_antifaz/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/25_antifaz/1-jpeg.jpg",
+      "fotos/segunda_salida/25_antifaz/gemini-generated-image-gvu7cugvu7cugvu7-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/25_falda",
+    "origen": "segunda_salida",
+    "carpeta": "25_falda",
+    "nombre": "Falda",
+    "precio": 25,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/25_falda/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/25_falda/1-jpeg.jpg",
+      "fotos/segunda_salida/25_falda/gemini-generated-image-ct6eqact6eqact6e-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/25_gatubela",
+    "origen": "primera_salida",
+    "carpeta": "25_gatubela",
+    "nombre": "Gatubela",
+    "precio": 25,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/25_gatubela/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/25_gatubela/1-jpeg.jpg",
+      "fotos/primera_salida/25_gatubela/gemini-generated-image-lb63vklb63vklb63-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/25_guerrera-vikinga",
+    "origen": "segunda_salida",
+    "carpeta": "25_guerrera-vikinga",
+    "nombre": "Guerrera vikinga",
+    "precio": 25,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/25_guerrera-vikinga/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/25_guerrera-vikinga/1-jpeg.jpg",
+      "fotos/segunda_salida/25_guerrera-vikinga/gemini-generated-image-cpi8crcpi8crcpi8-jpeg.jpg",
+      "fotos/segunda_salida/25_guerrera-vikinga/gemini-generated-image-wkyiybwkyiybwkyi-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/25_harry_poter",
+    "origen": "primera_salida",
+    "carpeta": "25_harry_poter",
+    "nombre": "Harry poter",
+    "precio": 25,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/25_harry_poter/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/25_harry_poter/1-jpeg.jpg",
+      "fotos/primera_salida/25_harry_poter/gemini-generated-image-f0b7ff0b7ff0b7ff-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/20_abeja",
+    "origen": "segunda_salida",
+    "carpeta": "20_abeja",
+    "nombre": "Abeja",
+    "precio": 20,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/20_abeja/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/20_abeja/1-jpeg.jpg",
+      "fotos/segunda_salida/20_abeja/gemini-generated-image-1tbhg31tbhg31tbh-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/20_adorno",
+    "origen": "segunda_salida",
+    "carpeta": "20_adorno",
+    "nombre": "Adorno",
+    "precio": 20,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/20_adorno/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/20_adorno/1-jpeg.jpg",
+      "fotos/segunda_salida/20_adorno/gemini-generated-image-45w2lc45w2lc45w2-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/20_elfo",
+    "origen": "segunda_salida",
+    "carpeta": "20_elfo",
+    "nombre": "Elfo",
+    "precio": 20,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/20_elfo/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/20_elfo/1-jpeg.jpg",
+      "fotos/segunda_salida/20_elfo/gemini-generated-image-4e799g4e799g4e79-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/20_gorros",
+    "origen": "segunda_salida",
+    "carpeta": "20_gorros",
+    "nombre": "Gorros",
+    "precio": 20,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/20_gorros/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/20_gorros/1-jpeg.jpg",
+      "fotos/segunda_salida/20_gorros/gemini-generated-image-u9olu1u9olu1u9ol-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/15_dracula",
+    "origen": "segunda_salida",
+    "carpeta": "15_dracula",
+    "nombre": "Dracula",
+    "precio": 15,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/15_dracula/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/15_dracula/1-jpeg.jpg",
+      "fotos/segunda_salida/15_dracula/gemini-generated-image-8zhj0y8zhj0y8zhj-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "primera_salida/15_winchas",
+    "origen": "primera_salida",
+    "carpeta": "15_winchas",
+    "nombre": "Winchas",
+    "precio": 15,
+    "descripcion": "",
+    "fotografia_principal": "fotos/primera_salida/15_winchas/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/primera_salida/15_winchas/1-jpeg.jpg",
+      "fotos/primera_salida/15_winchas/gemini-generated-image-24okth24okth24ok-jpeg.jpg",
+      "fotos/primera_salida/15_winchas/gemini-generated-image-xvutg9xvutg9xvut-jpeg.jpg",
+      "fotos/primera_salida/15_winchas/wincha-2-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/15_winchas-flores",
+    "origen": "segunda_salida",
+    "carpeta": "15_winchas-flores",
+    "nombre": "Winchas flores",
+    "precio": 15,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/15_winchas-flores/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/15_winchas-flores/1-jpeg.jpg",
+      "fotos/segunda_salida/15_winchas-flores/gemini-generated-image-nuxibknuxibknuxi-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/15_winchas-gallitos",
+    "origen": "segunda_salida",
+    "carpeta": "15_winchas-gallitos",
+    "nombre": "Winchas gallitos",
+    "precio": 15,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/15_winchas-gallitos/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/15_winchas-gallitos/1-jpeg.jpg",
+      "fotos/segunda_salida/15_winchas-gallitos/gemini-generated-image-b81coxb81coxb81c-jpeg.jpg",
+      "fotos/segunda_salida/15_winchas-gallitos/gemini-generated-image-oms5xwoms5xwoms5-jpeg.jpg"
+    ]
+  },
+  {
+    "id": "segunda_salida/15_winchas-reno",
+    "origen": "segunda_salida",
+    "carpeta": "15_winchas-reno",
+    "nombre": "Winchas reno",
+    "precio": 15,
+    "descripcion": "",
+    "fotografia_principal": "fotos/segunda_salida/15_winchas-reno/1-jpeg.jpg",
+    "fotografias": [
+      "fotos/segunda_salida/15_winchas-reno/1-jpeg.jpg",
+      "fotos/segunda_salida/15_winchas-reno/gemini-generated-image-lixoj6lixoj6lixo-jpeg.jpg"
+    ]
+  }
+]

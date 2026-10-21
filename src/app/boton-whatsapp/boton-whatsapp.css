@@ -1,0 +1,24 @@
+/* Fijo abajo a la derecha (RF-34). El pie de página reserva su hueco (RF-35). */
+.boton {
+  position: fixed;
+  right: var(--margen);
+  bottom: var(--margen);
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 56px;
+  padding: 0 20px 0 16px;
+  border-radius: 28px;
+  background: #25d366;
+  color: var(--tinta);
+  font-weight: 800;
+  font-size: 1.0625rem;
+  text-decoration: none;
+  box-shadow: 0 2px 0 rgb(34 24 46 / 0.35);
+}
+
+.icono {
+  width: 28px;
+  height: 28px;
+}

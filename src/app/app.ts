@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { BotonWhatsapp } from './boton-whatsapp/boton-whatsapp';
+import { Catalogo } from './catalogo/catalogo';
+import { LOGO } from './datos/contacto';
+import { PiePagina } from './pie-pagina/pie-pagina';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Catalogo, PiePagina, BotonWhatsapp],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('imzo_venta');
+  protected readonly logo = LOGO;
 }

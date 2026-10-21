@@ -1,0 +1,113 @@
+.dialogo {
+  width: min(560px, calc(100vw - 2 * var(--margen)));
+  max-height: calc(100dvh - 2 * var(--margen));
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: var(--superficie);
+  color: var(--tinta);
+  /* La descripción larga se desplaza dentro de la ventana (RF-28). */
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.dialogo::backdrop {
+  background: rgb(34 24 46 / 0.72);
+}
+
+.contenido {
+  /* Hueco para el botón de WhatsApp al final de la descripción. */
+  padding: 16px 16px 88px;
+}
+
+.cerrar {
+  /* Siempre a mano aunque la descripción sea larga. */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: block;
+  margin: 0 0 12px auto;
+  padding: 8px 14px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.foto-grande {
+  display: block;
+  width: 100%;
+  height: min(60dvh, 520px);
+  /* Entera y sin recortar (RF-23). */
+  object-fit: contain;
+  border-radius: var(--radio);
+  background: var(--fondo);
+}
+
+.foto-fallida {
+  display: grid;
+  place-items: center;
+  background: var(--foto-vacia);
+  font-weight: 700;
+}
+
+.miniaturas {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0 0 4px;
+  overflow-x: auto;
+  list-style: none;
+}
+
+.miniatura {
+  display: block;
+  width: 56px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--radio);
+  background: none;
+  cursor: pointer;
+}
+
+.miniatura[aria-pressed='true'] {
+  border-color: var(--tinta);
+}
+
+.miniatura img,
+.miniatura-fallida {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 4px;
+  background: var(--foto-vacia);
+}
+
+.nombre {
+  margin: 20px 0 4px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.precio {
+  display: inline-block;
+  margin: 0;
+  padding: 2px 12px;
+  border-radius: 3px 10px 10px 3px;
+  background: var(--etiqueta);
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.descripcion {
+  margin: 16px 0 0;
+  max-width: 65ch;
+  /* Respeta los saltos de línea escritos a mano (RF-28). */
+  white-space: pre-line;
+}

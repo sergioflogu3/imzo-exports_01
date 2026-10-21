@@ -1,0 +1,26 @@
+<button
+  type="button"
+  class="tarjeta"
+  [attr.data-producto]="producto().id"
+  (click)="abrir.emit(producto())"
+>
+  <span class="marco">
+    @if (fotoFallida()) {
+      <span class="foto foto-fallida">{{ producto().nombre }}</span>
+    } @else {
+      <img
+        class="foto"
+        [src]="producto().fotografia_principal"
+        [alt]="producto().nombre"
+        [attr.loading]="prioritaria() ? 'eager' : 'lazy'"
+        [attr.fetchpriority]="prioritaria() ? 'high' : null"
+        decoding="async"
+        width="300"
+        height="400"
+        (error)="fotoFallida.set(true)"
+      />
+    }
+    <span class="etiqueta">{{ formatearPrecio(producto().precio) }}</span>
+  </span>
+  <span class="nombre">{{ producto().nombre }}</span>
+</button>

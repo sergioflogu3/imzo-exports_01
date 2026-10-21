@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/* Tokens de diseño: lavanda pálida, tinta ciruela y etiqueta caléndula. */
+:root {
+  --fondo: #f4f2f8;
+  --superficie: #ffffff;
+  --tinta: #22182e;
+  --tinta-suave: #5e5470;
+  --etiqueta: #ffc93c;
+  --borde: #dad4e4;
+  --foto-vacia: #cfc9d8;
+  --radio: 6px;
+  --margen: 16px;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  color: var(--tinta);
+  background: var(--fondo);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* La página de detrás no se desplaza con el detalle abierto (RF-25). */
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  line-height: 1.5;
+}
+
+:focus-visible {
+  outline: 3px solid var(--tinta);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
