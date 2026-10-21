@@ -7,6 +7,7 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 - Proyecto Angular 21 recién generado con el CLI (commit `initial commit`): sin componentes propios, rutas vacías y la plantilla de bienvenida de Angular en `app.html`.
 - `CLAUDE.md` creado con el stack, los comandos, las convenciones y las reglas de dominio.
 - `docs/constitution.md` aprobado (6 principios) y enlazado desde `CLAUDE.md`. Skill `frontend-design` y MCP `chrome-devtools` instalados.
+- Flujo SDD listo: skill `sdd` (`.agents/skills/sdd/`) y 9 comandos `/sdd-*` en `.claude/commands/`. Siguiente: `/sdd-spec 001-listado-productos`.
 - Fotos de producto fuera del repo: `../primera_salida/` (21 carpetas, sin precio) y `../segunda_salida/` (58 carpetas `<precio>_<producto>`).
 
 ## Decisiones (y por qué)
