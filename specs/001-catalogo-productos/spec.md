@@ -59,7 +59,7 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 
 ### Página del catálogo
 
-- RF-17: EL SISTEMA muestra todos los productos del catálogo en una cuadrícula ordenada por precio de mayor a menor. A igual precio, por nombre visible en orden alfabético.
+- RF-17: EL SISTEMA muestra todos los productos del catálogo en una cuadrícula ordenada por precio de mayor a menor. A igual precio, por nombre visible en orden alfabético. MIENTRAS el visitante tiene una búsqueda no vacía, la cuadrícula muestra solo los resultados, en este mismo orden (spec 002).
 - RF-18: EL SISTEMA muestra en cada tarjeta la foto principal, el nombre visible y el precio en formato `Bs. {precio}`. El nombre y el precio son los textos de mayor tamaño de la tarjeta.
 - RF-19: EL SISTEMA muestra la foto de todas las tarjetas con la misma proporción (3:4), recortada para llenar el espacio.
 - RF-20: SI el nombre visible no cabe en 2 líneas de la tarjeta, ENTONCES EL SISTEMA lo corta con "…" en la tarjeta y lo muestra completo en el detalle.
@@ -89,7 +89,7 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 ## Requisitos no funcionales
 
 - RNF-1: La página no carga nada de servidores de terceros (scripts, fuentes, iconos ni imágenes): todas las peticiones van al propio sitio.
-- RNF-2: La página no usa cookies, almacenamiento del navegador ni formularios, y no recoge datos del visitante.
+- RNF-2: La página no usa cookies, almacenamiento del navegador ni formularios que pidan, envíen o guarden datos, y no recoge datos del visitante. El buscador de la spec 002 filtra en el propio navegador y está permitido.
 - RNF-3: Cada copia web pesa como máximo 300 KB y tiene el lado mayor de 1200 px como máximo.
 - RNF-4: Al abrir la página en una pantalla de 375×812 px, el navegador pide menos fotos que el número total de productos. Las fotos que no son la principal solo se piden al abrir el detalle del producto.
 - RNF-5: Todo se puede usar con el teclado, con el foco siempre visible.
@@ -117,7 +117,7 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 ## Fuera de alcance
 
 - Carrito, pagos, stock o disponibilidad por talla.
-- Búsqueda, filtros y categorías.
+- Filtros y categorías. (La búsqueda por texto se añade en la spec 002.)
 - Mensaje de WhatsApp distinto para cada producto.
 - Panel de administración o edición del catálogo desde la web.
 - Cerrar la ventana de detalle con el botón "atrás" del móvil.

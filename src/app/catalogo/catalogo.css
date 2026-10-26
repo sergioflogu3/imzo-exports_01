@@ -7,6 +7,11 @@
   list-style: none;
 }
 
+/* display: grid anula el hidden del navegador. */
+.cuadricula[hidden] {
+  display: none;
+}
+
 @media (min-width: 600px) {
   .cuadricula {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -25,4 +30,44 @@
   margin: 48px 0;
   font-size: 1.125rem;
   color: var(--tinta-suave);
+}
+
+/* El texto buscado puede ser una palabra larga sin espacios: se parte en líneas (RNF-4). */
+.sin-resultados {
+  max-width: 480px;
+  margin: 8px auto 16px;
+  font-size: 1.125rem;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* En anchos estrechos, un botón debajo del otro. */
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 48px;
+}
+
+/* 44 px de alto como mínimo para pulsarlos con el dedo (RNF-3). */
+.accion {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  color: var(--tinta);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.accion-whatsapp {
+  border-color: #25d366;
+  background: #25d366;
 }

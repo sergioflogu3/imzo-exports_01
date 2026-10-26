@@ -1,10 +1,32 @@
 @if (productos.length > 0) {
-  <ul class="cuadricula">
+  <app-buscador [(texto)]="texto" [contador]="resultado().contador" />
+  <!-- Siempre en el DOM para que el mensaje se anuncie al aparecer (RF-17). -->
+  <div aria-live="polite">
+    @if (resultado().sinResultados; as mensaje) {
+      <p class="sin-resultados">{{ mensaje }}</p>
+    }
+  </div>
+  @if (resultado().sinResultados) {
+    <div class="acciones">
+      <a
+        class="accion accion-whatsapp"
+        [href]="enlaceWhatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Escribir por WhatsApp</a
+      >
+      <button type="button" class="accion" (click)="verTodos()">Ver todos los productos</button>
+    </div>
+  }
+  <!-- Las tarjetas se crean una vez y solo se ocultan: recrearlas pasa de 100 ms (RNF-1). -->
+  <ul class="cuadricula" [hidden]="resultado().sinResultados !== null">
     @for (producto of productos; track producto.id) {
-      <li>
+      @let posicion = resultado().posiciones.get(producto.id);
+      <li [hidden]="posicion === undefined">
+        <!-- Las 8 primeras de los resultados cargan su foto sin esperar (RF-20). -->
         <app-tarjeta-producto
           [producto]="producto"
-          [prioritaria]="$index < 8"
+          [prioritaria]="posicion !== undefined && posicion < 8"
           (abrir)="abierto.set($event)"
         />
       </li>

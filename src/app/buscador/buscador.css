@@ -1,0 +1,67 @@
+/* En el flujo de la página, sin quedar fijo al desplazarse (RF-7). */
+.buscador {
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
+.etiqueta {
+  display: block;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.campo-con-boton {
+  position: relative;
+}
+
+/* 16 px de texto: así el móvil no amplía la página al tocar el campo (RNF-3). */
+.campo {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  /* A la derecha, hueco para el botón de borrar. */
+  padding: 10px 52px 10px 14px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  color: var(--tinta);
+  font: inherit;
+  font-size: 1rem;
+}
+
+.campo::placeholder {
+  color: var(--tinta-suave);
+  opacity: 1;
+}
+
+/* Dentro del campo, a la derecha; 44 × 44 px para pulsarlo con el dedo (RNF-3). */
+.borrar {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radio);
+  background: none;
+  color: var(--tinta-suave);
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.borrar:hover {
+  color: var(--tinta);
+}
+
+/* Reserva su línea aunque esté vacío, para que la cuadrícula no salte al escribir. */
+.contador {
+  min-height: 1.5em;
+  margin: 6px 0 0;
+  color: var(--tinta-suave);
+  font-size: 0.9375rem;
+}

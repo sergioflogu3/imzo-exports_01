@@ -1,0 +1,29 @@
+<div class="buscador" role="search">
+  <label class="etiqueta" for="busqueda">Buscar productos</label>
+  <!-- Sin <form> ni type="search": nada se envía y no hay botón de borrar del navegador (RF-5, RF-6). -->
+  <div class="campo-con-boton">
+    <input
+      #campo
+      id="busqueda"
+      class="campo"
+      type="text"
+      [value]="texto()"
+      (input)="actualizar($event)"
+      (keydown)="alPulsarTecla($event)"
+      [maxLength]="longitudMaxima"
+      placeholder="Ej.: bruja, dinosaurio"
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+      enterkeyhint="search"
+    />
+    <!-- Con cualquier carácter, aunque sea un espacio (RF-12). -->
+    @if (texto() !== '') {
+      <button type="button" class="borrar" aria-label="Borrar búsqueda" (click)="borrar()">
+        <span aria-hidden="true">×</span>
+      </button>
+    }
+  </div>
+  <!-- Siempre en el DOM para que los lectores de pantalla anuncien sus cambios (RF-17). -->
+  <p class="contador" role="status">{{ contador() ?? '' }}</p>
+</div>
