@@ -6,6 +6,7 @@ import {
   nombreCopia,
   nombreVisible,
   ordenarFotos,
+  origenesQueFaltan,
 } from './carpetas.ts';
 
 test('analiza una carpeta válida (RF-3)', () => {
@@ -124,4 +125,23 @@ test('crea nombres de copia seguros para URL', () => {
 
 test('los nombres de copia no chocan entre extensiones', () => {
   assert.notEqual(nombreCopia('a.png'), nombreCopia('a.jpeg'));
+});
+
+const TRES = ['primera_salida', 'segunda_salida', 'tercera_salida'];
+
+test('detecta que falta tercera_salida (spec 003, RF-1)', () => {
+  const existe = (origen: string) => origen !== 'tercera_salida';
+  assert.deepEqual(origenesQueFaltan(TRES, existe), ['tercera_salida']);
+});
+
+test('lista todas las carpetas de origen que faltan, en orden (RF-14)', () => {
+  const existe = (origen: string) => origen === 'segunda_salida';
+  assert.deepEqual(origenesQueFaltan(TRES, existe), ['primera_salida', 'tercera_salida']);
+});
+
+test('no falta ninguna carpeta de origen (RF-14)', () => {
+  assert.deepEqual(
+    origenesQueFaltan(TRES, () => true),
+    [],
+  );
 });

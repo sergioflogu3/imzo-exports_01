@@ -1,6 +1,6 @@
 # Spec 002 — Buscador de productos
 
-Estado: implementada
+Estado: implementada (la spec 003 modifica algunos de sus RF y está pendiente de implementar)
 
 ## Contexto y objetivo
 
@@ -37,8 +37,8 @@ Amplía la spec 001 (catálogo de productos). Con la búsqueda vacía, la págin
 
 ### Buscador
 
-- RF-1: MIENTRAS el catálogo tiene al menos un producto, EL SISTEMA muestra entre la cabecera y la cuadrícula una etiqueta visible "Buscar productos" y, debajo, un campo de búsqueda asociado a esa etiqueta con el texto de ejemplo "Ej.: bruja, dinosaurio", que desaparece al escribir.
-- RF-2: SI el catálogo no tiene productos, ENTONCES EL SISTEMA no muestra el buscador y se mantiene el mensaje de catálogo vacío de la spec 001 (RF-29).
+- RF-1: MIENTRAS la sección de la pestaña activa tiene al menos un producto (spec 003), EL SISTEMA muestra entre las pestañas y la cuadrícula una etiqueta visible "Buscar productos" y, debajo, un campo de búsqueda asociado a esa etiqueta con el texto de ejemplo "Ej.: bruja, dinosaurio", que desaparece al escribir.
+- RF-2: SI el catálogo no tiene productos, ENTONCES EL SISTEMA no muestra el buscador y se mantiene el mensaje de catálogo vacío de la spec 001 (RF-29). SI solo está vacía la sección de la pestaña activa, ENTONCES se aplica la spec 003 (RF-12 y RF-15).
 - RF-3: EL SISTEMA admite como máximo 50 caracteres en el campo. Lo que se escribe o se pega de más se descarta sin mostrar ningún aviso.
 - RF-4: EL SISTEMA no muestra sugerencias del navegador con búsquedas anteriores y no deja que el navegador las guarde.
 - RF-5: EL SISTEMA muestra un único botón para borrar dentro del campo (el de RF-12), sin el botón de borrar propio del navegador.
@@ -47,21 +47,21 @@ Amplía la spec 001 (catálogo de productos). Con la búsqueda vacía, la págin
 
 ### Filtrado
 
-- RF-8: CUANDO cambia el texto de búsqueda, EL SISTEMA muestra en la cuadrícula solo los resultados, sin necesidad de pulsar ningún botón ni Enter.
-- RF-9: MIENTRAS la búsqueda está vacía, EL SISTEMA muestra todos los productos del catálogo y no muestra el contador de resultados (RF-14) ni el mensaje sin resultados (RF-15).
+- RF-8: CUANDO cambia el texto de búsqueda, EL SISTEMA muestra en la cuadrícula solo los resultados de la pestaña activa (spec 003), sin necesidad de pulsar ningún botón ni Enter.
+- RF-9: MIENTRAS la búsqueda está vacía, EL SISTEMA muestra todos los productos de la pestaña activa (spec 003) y no muestra el contador de resultados (RF-14) ni el mensaje sin resultados (RF-15).
 - RF-10: EL SISTEMA muestra los resultados en el mismo orden que el catálogo completo: precio de mayor a menor y, a igual precio, por nombre visible en orden alfabético.
 - RF-11: EL SISTEMA trata como productos distintos los que tienen el mismo nombre visible y distinto precio, y muestra todos los que coincidan.
 
 ### Borrar la búsqueda
 
-- RF-12: MIENTRAS el campo tiene algún carácter, EL SISTEMA muestra dentro del campo un botón con el nombre accesible "Borrar búsqueda". CUANDO el visitante lo pulsa, EL SISTEMA vacía el campo, muestra todos los productos y devuelve el foco al campo.
+- RF-12: MIENTRAS el campo tiene algún carácter, EL SISTEMA muestra dentro del campo un botón con el nombre accesible "Borrar búsqueda". CUANDO el visitante lo pulsa, EL SISTEMA vacía el campo, muestra todos los productos de la pestaña activa (spec 003) y devuelve el foco al campo.
 - RF-13: CUANDO el visitante pulsa Escape con el foco en el campo y el campo tiene algún carácter, EL SISTEMA se comporta igual que al pulsar "Borrar búsqueda" (RF-12). Con el campo vacío, Escape no hace nada.
 
 ### Contador y sin resultados
 
 - RF-14: MIENTRAS hay una búsqueda no vacía con resultados, EL SISTEMA muestra debajo del campo el texto "1 producto" o "{n} productos", según el número de resultados.
 - RF-15: SI una búsqueda no vacía no tiene resultados, ENTONCES EL SISTEMA muestra en lugar de la cuadrícula el mensaje `No encontramos "{texto}". Escríbenos por WhatsApp y te ayudamos.`, donde `{texto}` es el texto de búsqueda tal como lo escribió el visitante (sin normalizar), sin espacios al principio ni al final y mostrado literalmente, sin interpretar ningún carácter.
-- RF-16: MIENTRAS se muestra el mensaje sin resultados, EL SISTEMA muestra debajo de él dos botones: "Escribir por WhatsApp", con el mismo destino, el mismo mensaje predefinido y la misma forma de abrirse que el botón fijo de WhatsApp de la spec 001 (RF-34), y "Ver todos los productos", que vacía el campo, muestra todos los productos y devuelve el foco al campo.
+- RF-16: MIENTRAS se muestra el mensaje sin resultados, EL SISTEMA muestra debajo de él dos botones: "Escribir por WhatsApp", con el mismo destino, el mismo mensaje predefinido y la misma forma de abrirse que el botón fijo de WhatsApp de la spec 001 (RF-34), y "Ver toda la sección", que vacía el campo, muestra todos los productos de la pestaña activa (spec 003) y devuelve el foco al campo.
 - RF-17: CUANDO cambia el contador de resultados o aparece el mensaje sin resultados, EL SISTEMA lo anuncia a los lectores de pantalla sin mover el foco ni interrumpir lo que el visitante está escribiendo.
 
 ### Convivencia con el catálogo
@@ -71,7 +71,7 @@ Amplía la spec 001 (catálogo de productos). Con la búsqueda vacía, la págin
 - RF-20: CUANDO cambian los resultados, EL SISTEMA carga sin esperar a que el visitante se desplace la foto principal de los 8 primeros resultados, y no pide fotos de productos que no están en los resultados.
 - RF-21: EL SISTEMA deja al final de la página el mismo margen de la spec 001 (RF-35), de modo que el botón fijo de WhatsApp no tape los botones del mensaje sin resultados, tampoco a 320 px.
 - RF-22: CUANDO el visitante abre la ventana de detalle desde un resultado, EL SISTEMA se comporta igual que en la spec 001 y, al cerrarla, conserva el texto de búsqueda, los resultados y el contador.
-- RF-23: EL SISTEMA no guarda el texto de búsqueda: al recargar la página el campo aparece vacío y se ve todo el catálogo.
+- RF-23: EL SISTEMA no guarda el texto de búsqueda: al recargar la página el campo aparece vacío y se ven todos los productos de la pestaña Navidad (spec 003).
 
 ## Requisitos no funcionales
 

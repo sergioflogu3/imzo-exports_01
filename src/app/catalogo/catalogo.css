@@ -33,7 +33,8 @@
 }
 
 /* El texto buscado puede ser una palabra larga sin espacios: se parte en líneas (RNF-4). */
-.sin-resultados {
+.sin-resultados,
+.seccion-vacia {
   max-width: 480px;
   margin: 8px auto 16px;
   font-size: 1.125rem;

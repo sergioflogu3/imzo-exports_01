@@ -1,4 +1,5 @@
-// Genera src/app/datos/productos.json y public/fotos/ a partir de ../primera_salida y ../segunda_salida.
+// Genera src/app/datos/productos.json y public/fotos/ a partir de ../primera_salida, ../segunda_salida
+// y ../tercera_salida.
 // Uso: npm run catalogo
 import {
   existsSync,
@@ -12,7 +13,14 @@ import {
 } from 'node:fs';
 import path from 'node:path';
 import type { Producto } from '../src/app/datos/producto.ts';
-import { analizarCarpeta, nombreCopia, nombreVisible, ordenarFotos } from './catalogo/carpetas.ts';
+import { ORIGENES, contarPorSeccion } from '../src/app/datos/secciones.ts';
+import {
+  analizarCarpeta,
+  nombreCopia,
+  nombreVisible,
+  ordenarFotos,
+  origenesQueFaltan,
+} from './catalogo/carpetas.ts';
 import { fusionarCatalogo, type ProductoEscaneado } from './catalogo/fusion.ts';
 import { comprobarHerramientaImagenes, crearCopiaWeb, medirCopia } from './catalogo/imagenes.ts';
 import { crearResumen, esCopiaPesada, type DatosResumen } from './catalogo/resumen.ts';
@@ -20,7 +28,6 @@ import { leerCatalogo } from './catalogo/validacion.ts';
 
 const RAIZ_PROYECTO = path.resolve(import.meta.dirname, '..');
 const RAIZ_ORIGENES = path.resolve(RAIZ_PROYECTO, '..');
-const ORIGENES = ['primera_salida', 'segunda_salida'];
 const RUTA_CATALOGO = path.join(RAIZ_PROYECTO, 'src/app/datos/productos.json');
 const CARPETA_PUBLICA = path.join(RAIZ_PROYECTO, 'public');
 const CARPETA_FOTOS = path.join(CARPETA_PUBLICA, 'fotos');
@@ -36,9 +43,12 @@ function fallar(mensaje: string): never {
 
 /** RF-14 y RF-15: se comprueba todo antes de escribir nada. */
 function leerCatalogoExistente(): Producto[] {
-  for (const origen of ORIGENES) {
-    const ruta = path.join(RAIZ_ORIGENES, origen);
-    if (!esCarpeta(ruta)) fallar(`no se encuentra la carpeta de origen ${ruta}`);
+  const faltan = origenesQueFaltan(ORIGENES, (origen) =>
+    esCarpeta(path.join(RAIZ_ORIGENES, origen)),
+  );
+  if (faltan.length > 0) {
+    const rutas = faltan.map((origen) => path.join(RAIZ_ORIGENES, origen));
+    fallar(`no se encuentran las carpetas de origen:\n  - ${rutas.join('\n  - ')}`);
   }
   if (!existsSync(RUTA_CATALOGO)) return [];
   const resultado = leerCatalogo(readFileSync(RUTA_CATALOGO, 'utf8'));
@@ -152,6 +162,7 @@ function generar(): void {
 
   const resumen: DatosResumen = {
     productos: 0,
+    porSeccion: { navidad: 0, disfraces: 0 },
     copiasCreadas: 0,
     copiasBorradas: 0,
     noDisponibles: [],
@@ -167,6 +178,7 @@ function generar(): void {
   escribirCatalogo(catalogo);
   resumen.copiasBorradas = borrarCopiasSobrantes(catalogo);
   resumen.productos = catalogo.length;
+  resumen.porSeccion = contarPorSeccion(catalogo);
   resumen.preciosCambiados = preciosCambiados;
   console.log(crearResumen(resumen));
 }

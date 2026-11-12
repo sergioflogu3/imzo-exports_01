@@ -1,5 +1,6 @@
 // Medición de las copias web y texto del resumen de la generación (RF-16, RNF-3).
 import { formatearPrecio } from '../../src/app/datos/catalogo.ts';
+import type { Seccion } from '../../src/app/datos/secciones.ts';
 import type { CambioPrecio } from './fusion.ts';
 
 /** 300 KB en unidades decimales, como las muestra el Finder de macOS. */
@@ -18,6 +19,8 @@ export function esCopiaPesada({ bytes, ancho, alto }: MedidaCopia): boolean {
 
 export interface DatosResumen {
   productos: number;
+  /** Productos de cada pestaña (spec 003, RF-3). */
+  porSeccion: Record<Seccion, number>;
   copiasCreadas: number;
   copiasBorradas: number;
   noDisponibles: string[];
@@ -40,7 +43,7 @@ function describirCambio({ anterior, nuevo, precioAnterior, precioNuevo }: Cambi
 export function crearResumen(datos: DatosResumen): string {
   const productos = `${datos.productos} ${datos.productos === 1 ? 'producto' : 'productos'}`;
   return [
-    `Catálogo generado: ${productos}.`,
+    `Catálogo generado: ${productos}.\nNavidad: ${datos.porSeccion.navidad} · Disfraces: ${datos.porSeccion.disfraces}`,
     `Copias web: ${datos.copiasCreadas} creadas, ${datos.copiasBorradas} borradas.`,
     seccion('No disponible', datos.noDisponibles),
     seccion('Sin 1.jpeg', datos.sin1jpeg),

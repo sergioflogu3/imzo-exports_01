@@ -1,0 +1,20 @@
+<!-- Pestañas accesibles: solo la activa entra en el orden de Tab; las flechas cambian de pestaña (RF-8). -->
+<div class="pestanas" role="tablist" aria-label="Secciones del catálogo">
+  @for (seccion of secciones; track seccion.id) {
+    @let activa = seccion.id === seleccionada();
+    <button
+      #pestana
+      type="button"
+      role="tab"
+      class="pestana"
+      [id]="'pestana-' + seccion.id"
+      [attr.aria-selected]="activa"
+      [attr.aria-controls]="controla()"
+      [tabIndex]="activa ? 0 : -1"
+      (click)="seleccionada.set(seccion.id)"
+      (keydown)="alPulsarTecla($event)"
+    >
+      {{ seccion.etiqueta }}
+    </button>
+  }
+</div>

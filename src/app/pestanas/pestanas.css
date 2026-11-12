@@ -1,0 +1,42 @@
+/* En el flujo de la página, sin quedar fijas al desplazarse (RF-10). */
+.pestanas {
+  display: flex;
+  justify-content: center;
+  max-width: 480px;
+  margin: 0 auto 24px;
+  border-bottom: 1px solid var(--borde);
+}
+
+/* 44 px de alto y 16 px de texto como mínimo (RNF-1). */
+.pestana {
+  min-height: 48px;
+  padding: 10px 24px;
+  border: 0;
+  /* Línea transparente para que la activa no desplace el texto al marcarse. */
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  background: none;
+  color: var(--tinta-suave);
+  font: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.pestana:hover {
+  color: var(--tinta);
+}
+
+/* La activa se distingue por la negrita y la línea, no solo por el color (RF-7). */
+.pestana[aria-selected='true'] {
+  border-bottom-color: var(--tinta);
+  color: var(--tinta);
+  font-weight: 700;
+}
+
+/* En móvil, cada pestaña ocupa la mitad del ancho (RNF-2). */
+@media (max-width: 599px) {
+  .pestana {
+    flex: 1 1 0;
+    padding-inline: 8px;
+  }
+}

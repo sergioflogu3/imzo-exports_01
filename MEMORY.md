@@ -6,9 +6,10 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 
 - Constitución con 6 principios. Enmiendas aprobadas: principio 1 (la generación puede usar Node y herramientas locales del sistema) y principio 5 (enlaces a Facebook y TikTok; el 2026-10-26, también un buscador que filtra en el navegador).
 - Flujo SDD: skill `sdd` (`.agents/skills/sdd/`) y comandos `/sdd-*`. Ojo: los comandos leen mal los argumentos (`$1` y `$2` salen desplazados), así que hay que interpretar la carpeta y la tarea a mano.
-- Spec `001-catalogo-productos` implementada. `npm run catalogo` genera las copias web en `public/fotos/` (fuera de git). Catálogo actual: 64 productos (eran 75: el vendedor va quitando lo que se vende, así que la cifra baja con el tiempo y no es un error).
+- Spec `001-catalogo-productos` implementada. `npm run catalogo` genera las copias web en `public/fotos/` (fuera de git). Catálogo: baja con el tiempo (eran 75, luego 64: el vendedor va quitando lo que se vende, así que la cifra baja con el tiempo y no es un error).
 - Spec `002-buscador-productos` **implementada** (aprobada el 2026-10-26): 23 RF, tareas T1–T9 hechas, 79 tests. Lógica en `datos/busqueda.ts` (`buscar()` → `ResultadoBusqueda` con `posiciones`), componente `buscador/` y cuadrícula en `Catalogo`, que crea las 64 tarjetas una vez y oculta las que no coinciden.
-- Fotos de producto fuera del repo: `../primera_salida/` y `../segunda_salida/` (carpetas `<precio>_<producto>`).
+- Spec `003-pestanas-temporada` **implementada, pendiente de aprobación** (2026-11-12): pestañas Navidad (por defecto, `../tercera_salida`) y Disfraces (primera y segunda). Ajusta RF de las specs 001 y 002. Spec y plan aprobados (2026-11-12); `tasks.md` aprobado (T1–T9). T1–T9 hechas; `/sdd-validate` superado el 2026-11-12 (104 tests, 18 RF y 6 RNF; cambio de pestaña ≤57 ms con CPU 4×). Pendiente: que el usuario apruebe pasar las specs 001, 002 y 003 a "implementada". La generación importa `ORIGENES` de `secciones.ts` y el resumen da `Navidad: n · Disfraces: m`. Catálogo a 2026-11-12: 48 productos (Navidad 8, Disfraces 40); `150_elf` pasó de `segunda_salida` a `tercera_salida`. Decisiones: sección deducida de `origen` (sin cambiar el JSON) y búsqueda limitada a la pestaña activa.
+- Fotos de producto fuera del repo: `../primera_salida/`, `../segunda_salida/` y `../tercera_salida/` (carpetas `<precio>_<producto>`).
 
 ## Decisiones (y por qué)
 
@@ -20,6 +21,11 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 - Las tarjetas se ocultan con `hidden` en lugar de recrearse: recrearlas tardaba hasta 209 ms (CPU 4×, 375 px) y ocultarlas tarda ≤57 ms (RNF-1). `.cuadricula[hidden]` necesita `display: none` explícito porque `display: grid` lo anula.
 
 ## Aprendizajes y errores a evitar
+
+- Medir fotos pedidas SIEMPRE en una pestaña nueva con `isolatedContext` del MCP: en una pestaña que ya cargó las fotos, Chrome se salta la carga perezosa (salen las 48 con 304) y la medición engaña. La tarjeta ya pide solo las visibles; el "problema RNF-4" de la spec 001 no existía.
+- Si el MCP de Chrome dice "browser is already running", hay un Chrome automatizado huérfano con el perfil `chrome-devtools-mcp`: cerrarlo (con permiso).
+
+- `src/app/datos/` no puede importar valores entre sus archivos: la app no admite la extensión `.ts` (sin `allowImportingTsExtensions`) y Node la exige. Solo `import type`; la composición va en el componente o en `scripts/`.
 
 - `node --test` exige imports relativos con extensión `.ts`. Entre archivos de `datos/`, `import type` sin extensión.
 - En los tests de búsqueda, los textos de "sin resultados" se normalizan (`<b>Ñ` → `b n`) y pueden coincidir: usar fragmentos imposibles (`zz`).
@@ -35,7 +41,6 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 
 ## Problemas conocidos (spec 001, sin corregir)
 
-- RNF-4: `tarjeta-producto.html` asigna `[src]` antes que `[attr.loading]`, así que se piden las 64 fotos al cargar, también a 375 px.
 - El logo del pie lleva `loading="lazy"` sin `width`/`height` (aviso en la consola).
 - El botón de WhatsApp está abajo a la izquierda, pero RF-34 dice "abajo a la derecha".
 

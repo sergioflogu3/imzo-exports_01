@@ -59,3 +59,11 @@ export function nombreCopia(archivo: string): string {
     .replace(/^-|-$/g, '');
   return `${base}.jpg`;
 }
+
+/** Carpetas de origen que no existen, en el orden recibido (RF-14; spec 003, RF-1). */
+export function origenesQueFaltan(
+  origenes: readonly string[],
+  esCarpeta: (origen: string) => boolean,
+): string[] {
+  return origenes.filter((origen) => !esCarpeta(origen));
+}

@@ -134,3 +134,19 @@ test('el catálogo sale ordenado del más caro al más barato', () => {
     [350, 20],
   );
 });
+
+test('mover una carpeta a tercera_salida crea un producto nuevo, no un cambio de precio (spec 003)', () => {
+  const T = 'tercera_salida';
+  const r = fusionarCatalogo(
+    [existente(S, '150_elf', 150, 'Elfo navideño', 'Talla única')],
+    [escaneado(T, '150_elf', 150)],
+  );
+  assert.equal(r.catalogo.length, 1);
+  assert.equal(r.catalogo[0].id, `${T}/150_elf`);
+  assert.equal(r.catalogo[0].origen, T);
+  assert.equal(r.catalogo[0].nombre, 'Visible 150_elf');
+  assert.equal(r.catalogo[0].descripcion, '');
+  assert.deepEqual(r.nuevos, [`${T}/150_elf`]);
+  assert.deepEqual(r.quitados, [`${S}/150_elf`]);
+  assert.deepEqual(r.preciosCambiados, []);
+});

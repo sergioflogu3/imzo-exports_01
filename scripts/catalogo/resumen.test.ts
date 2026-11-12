@@ -18,6 +18,7 @@ test('el lado mayor pasa de 1200 px: pesada', () => {
 
 const vacio: DatosResumen = {
   productos: 0,
+  porSeccion: { navidad: 0, disfraces: 0 },
   copiasCreadas: 0,
   copiasBorradas: 0,
   noDisponibles: [],
@@ -77,4 +78,19 @@ test('las categorías vacías se muestran con 0', () => {
 
 test('usa el singular con un solo producto', () => {
   assert.match(crearResumen({ ...vacio, productos: 1 }), /Catálogo generado: 1 producto\./);
+});
+
+test('la segunda línea del resumen da los productos de cada sección (spec 003, RF-3)', () => {
+  const texto = crearResumen({
+    ...vacio,
+    productos: 72,
+    porSeccion: { navidad: 8, disfraces: 64 },
+  });
+  const lineas = texto.split('\n');
+  assert.equal(lineas[0], 'Catálogo generado: 72 productos.');
+  assert.equal(lineas[1], 'Navidad: 8 · Disfraces: 64');
+});
+
+test('la línea por sección también sale con ceros (spec 003, RF-3)', () => {
+  assert.equal(crearResumen(vacio).split('\n')[1], 'Navidad: 0 · Disfraces: 0');
 });

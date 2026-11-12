@@ -1,6 +1,6 @@
 # Spec 001 — Catálogo de productos
 
-Estado: aprobada
+Estado: aprobada (la spec 003 modifica algunos de sus RF y está pendiente de implementar)
 
 ## Contexto y objetivo
 
@@ -13,7 +13,7 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 
 ## Historias de usuario
 
-- HU-1. Como visitante, quiero ver todos los productos ordenados del más caro al más barato, con su foto, nombre y precio, para encontrar rápido lo que me interesa.
+- HU-1. Como visitante, quiero ver todos los productos de cada sección (spec 003) ordenados del más caro al más barato, con su foto, nombre y precio, para encontrar rápido lo que me interesa.
 - HU-2. Como visitante, quiero abrir un producto y ver su descripción y todas sus fotos para decidir si lo compro.
 - HU-3. Como visitante, quiero escribir al vendedor por WhatsApp con un solo toque para consultar o comprar.
 - HU-4. Como visitante, quiero llegar a las redes sociales del vendedor (Facebook y TikTok) para confiar en el negocio.
@@ -23,7 +23,7 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 
 ## Definiciones
 
-- **Carpetas de origen**: `primera_salida` y `segunda_salida`.
+- **Carpetas de origen**: `primera_salida`, `segunda_salida` y `tercera_salida` (esta última, añadida en la spec 003).
 - **Carpeta de producto válida**: carpeta directamente dentro de una carpeta de origen cuyo nombre es `{precio}_{nombre}`, donde `{precio}` son solo dígitos con valor mayor que 0 y `{nombre}` tiene al menos una letra o un número. Se separa por el **primer** guion bajo (`140_dark_doll` → precio 140, nombre `dark_doll`).
 - **Producto**: lo que genera una carpeta de producto válida. Se identifica por su carpeta de origen y el nombre de su carpeta, así que dos carpetas con el mismo nombre visible (`50_calaca` y `95_calaca`) son dos productos distintos.
 - **Precio**: número entero de bolivianos. Se muestra como `Bs. {precio}` (p. ej. `Bs. 90`).
@@ -40,7 +40,7 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 
 ### Generación del catálogo
 
-- RF-1: CUANDO el administrador ejecuta la generación, EL SISTEMA crea un producto en el catálogo por cada carpeta de producto válida de las dos carpetas de origen.
+- RF-1: CUANDO el administrador ejecuta la generación, EL SISTEMA crea un producto en el catálogo por cada carpeta de producto válida de las carpetas de origen.
 - RF-2: SI una carpeta no cumple el formato de carpeta de producto válida, ENTONCES EL SISTEMA la ignora y la incluye en el resumen como "no disponible".
 - RF-3: EL SISTEMA obtiene el precio del prefijo numérico de la carpeta (`090_x` → 90).
 - RF-4: CUANDO un producto aparece por primera vez, EL SISTEMA le asigna el nombre visible derivado de la carpeta y una descripción vacía.
@@ -53,13 +53,13 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 - RF-11: CUANDO el administrador ejecuta la generación, EL SISTEMA crea la copia web de cada foto válida que no la tenga o cuyo original sea más reciente que su copia, sin modificar, mover ni renombrar los archivos originales.
 - RF-12: CUANDO el administrador ejecuta la generación, EL SISTEMA borra las copias web que ya no correspondan a ninguna foto válida de un producto del catálogo.
 - RF-13: SI una carpeta que estaba en el catálogo ya no existe o ya no es válida, y no se trata de un cambio de precio, ENTONCES EL SISTEMA quita su producto del catálogo.
-- RF-14: SI falta alguna de las dos carpetas de origen, ENTONCES EL SISTEMA detiene la generación con un error y no modifica el catálogo ni las copias web.
+- RF-14: SI falta alguna de las carpetas de origen, ENTONCES EL SISTEMA detiene la generación con un error y no modifica el catálogo ni las copias web.
 - RF-15: SI el catálogo existente tiene un error de formato, ENTONCES EL SISTEMA detiene la generación con un error que indica dónde está el problema y no modifica nada.
 - RF-16: CUANDO la generación termina, EL SISTEMA muestra un resumen con el número de productos del catálogo y la lista de carpetas o fotos "no disponible", "sin 1.jpeg", "sin fotos", "foto con error", "precio cambiado" y "pesada" (copia web de más de 300 KB o con el lado mayor de más de 1200 px).
 
 ### Página del catálogo
 
-- RF-17: EL SISTEMA muestra todos los productos del catálogo en una cuadrícula ordenada por precio de mayor a menor. A igual precio, por nombre visible en orden alfabético. MIENTRAS el visitante tiene una búsqueda no vacía, la cuadrícula muestra solo los resultados, en este mismo orden (spec 002).
+- RF-17: EL SISTEMA muestra los productos de la pestaña activa (spec 003) en una cuadrícula ordenada por precio de mayor a menor. A igual precio, por nombre visible en orden alfabético. MIENTRAS el visitante tiene una búsqueda no vacía, la cuadrícula muestra solo los resultados de esa pestaña, en este mismo orden (spec 002).
 - RF-18: EL SISTEMA muestra en cada tarjeta la foto principal, el nombre visible y el precio en formato `Bs. {precio}`. El nombre y el precio son los textos de mayor tamaño de la tarjeta.
 - RF-19: EL SISTEMA muestra la foto de todas las tarjetas con la misma proporción (3:4), recortada para llenar el espacio.
 - RF-20: SI el nombre visible no cabe en 2 líneas de la tarjeta, ENTONCES EL SISTEMA lo corta con "…" en la tarjeta y lo muestra completo en el detalle.
@@ -117,7 +117,7 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 ## Fuera de alcance
 
 - Carrito, pagos, stock o disponibilidad por talla.
-- Filtros y categorías. (La búsqueda por texto se añade en la spec 002.)
+- Filtros y categorías. (La búsqueda por texto se añade en la spec 002 y las pestañas Navidad y Disfraces, en la spec 003.)
 - Mensaje de WhatsApp distinto para cada producto.
 - Panel de administración o edición del catálogo desde la web.
 - Cerrar la ventana de detalle con el botón "atrás" del móvil.
@@ -134,8 +134,9 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 ## Criterios de finalización
 
 - Todos los RF tienen un test que pasa o, si son de interfaz, una comprobación visual en escritorio y a 375 px.
-- La generación con las carpetas reales produce 75 productos y lista como "no disponible" `cruela`, `grinch`, `harry_potter` y `radioactivo`.
-- La página muestra los 75 productos del más caro (Bs. 380) al más barato (Bs. 15).
+- Cifras a la fecha de esta spec, antes de la spec 003 (el catálogo cambia con el tiempo):
+  - La generación con las carpetas reales produce 75 productos y lista como "no disponible" `cruela`, `grinch`, `harry_potter` y `radioactivo`.
+  - La página muestra los 75 productos del más caro (Bs. 380) al más barato (Bs. 15).
 - El resumen de la generación no marca ninguna copia como "pesada".
 - Se cumplen los 6 principios de `docs/constitution.md`.
 
