@@ -9,6 +9,7 @@ import {
   rmdirSync,
   statSync,
   unlinkSync,
+  utimesSync,
   writeFileSync,
 } from 'node:fs';
 import path from 'node:path';
@@ -16,6 +17,7 @@ import type { Producto } from '../src/app/datos/producto.ts';
 import { ORIGENES, contarPorSeccion } from '../src/app/datos/secciones.ts';
 import {
   analizarCarpeta,
+  copiaDesactualizada,
   nombreCopia,
   nombreVisible,
   ordenarFotos,
@@ -58,10 +60,6 @@ function leerCatalogoExistente(): Producto[] {
   return resultado.productos;
 }
 
-function necesitaCopia(original: string, copia: string): boolean {
-  return !existsSync(copia) || statSync(original).mtimeMs > statSync(copia).mtimeMs;
-}
-
 function escanearOrigenes(resumen: DatosResumen): ProductoEscaneado[] {
   const escaneados: ProductoEscaneado[] = [];
 
@@ -89,8 +87,12 @@ function escanearOrigenes(resumen: DatosResumen): ProductoEscaneado[] {
         const url = `fotos/${origen}/${carpeta}/${nombreCopia(foto)}`;
         const copia = path.join(CARPETA_PUBLICA, url);
         try {
-          if (necesitaCopia(original, copia)) {
+          const fechaOriginal = statSync(original).mtime;
+          const fechaCopia = existsSync(copia) ? statSync(copia).mtimeMs : null;
+          if (copiaDesactualizada(fechaOriginal.getTime(), fechaCopia)) {
             crearCopiaWeb(original, copia);
+            // La copia guarda la fecha de su original: así se detecta un reemplazo más antiguo.
+            utimesSync(copia, new Date(), fechaOriginal);
             resumen.copiasCreadas++;
           }
           if (esCopiaPesada(medirCopia(copia))) resumen.pesadas.push(url);

@@ -1,18 +1,5 @@
 [
   {
-    "id": "tercera_salida/350_grinch",
-    "origen": "tercera_salida",
-    "carpeta": "350_grinch",
-    "nombre": "Grinch",
-    "precio": 350,
-    "descripcion": "",
-    "fotografia_principal": "fotos/tercera_salida/350_grinch/1-jpeg.jpg",
-    "fotografias": [
-      "fotos/tercera_salida/350_grinch/1-jpeg.jpg",
-      "fotos/tercera_salida/350_grinch/traje-jpeg.jpg"
-    ]
-  },
-  {
     "id": "segunda_salida/280_dino_peque",
     "origen": "segunda_salida",
     "carpeta": "280_dino_peque",
@@ -65,20 +52,8 @@
     "fotografia_principal": "fotos/tercera_salida/180_mamanuela/1-jpeg.jpg",
     "fotografias": [
       "fotos/tercera_salida/180_mamanuela/1-jpeg.jpg",
-      "fotos/tercera_salida/180_mamanuela/gemini-generated-image-281bj7281bj7281b-jpeg.jpg"
-    ]
-  },
-  {
-    "id": "tercera_salida/180_papanoel",
-    "origen": "tercera_salida",
-    "carpeta": "180_papanoel",
-    "nombre": "Papanoel",
-    "precio": 180,
-    "descripcion": "",
-    "fotografia_principal": "fotos/tercera_salida/180_papanoel/1-jpeg.jpg",
-    "fotografias": [
-      "fotos/tercera_salida/180_papanoel/1-jpeg.jpg",
-      "fotos/tercera_salida/180_papanoel/gemini-generated-image-r1leqlr1leqlr1le-jpeg.jpg"
+      "fotos/tercera_salida/180_mamanuela/gemini-generated-image-281bj7281bj7281b-jpeg.jpg",
+      "fotos/tercera_salida/180_mamanuela/original-jpeg.jpg"
     ]
   },
   {
@@ -91,7 +66,7 @@
     "fotografia_principal": "fotos/tercera_salida/150_elf/1-jpeg.jpg",
     "fotografias": [
       "fotos/tercera_salida/150_elf/1-jpeg.jpg",
-      "fotos/tercera_salida/150_elf/alterna-jpeg.jpg",
+      "fotos/tercera_salida/150_elf/alertanas-jpeg.jpg",
       "fotos/tercera_salida/150_elf/original-jpeg.jpg"
     ]
   },
@@ -438,7 +413,8 @@
     "fotografia_principal": "fotos/tercera_salida/45_sorpresas_navidenas/1-jpeg.jpg",
     "fotografias": [
       "fotos/tercera_salida/45_sorpresas_navidenas/1-jpeg.jpg",
-      "fotos/tercera_salida/45_sorpresas_navidenas/diseno-de-producto-1-png.jpg"
+      "fotos/tercera_salida/45_sorpresas_navidenas/diseno-de-producto-1-png.jpg",
+      "fotos/tercera_salida/45_sorpresas_navidenas/original-jpeg.jpg"
     ]
   },
   {
@@ -477,7 +453,8 @@
     "fotografia_principal": "fotos/tercera_salida/40_sorpresas_navidenas/1-jpeg.jpg",
     "fotografias": [
       "fotos/tercera_salida/40_sorpresas_navidenas/1-jpeg.jpg",
-      "fotos/tercera_salida/40_sorpresas_navidenas/diseno-de-producto-jpeg.jpg"
+      "fotos/tercera_salida/40_sorpresas_navidenas/diseno-de-producto-jpeg.jpg",
+      "fotos/tercera_salida/40_sorpresas_navidenas/original-jpeg.jpg"
     ]
   },
   {
@@ -635,7 +612,8 @@
     "fotografia_principal": "fotos/tercera_salida/12_pegatinas_decorativas/1-jpeg.jpg",
     "fotografias": [
       "fotos/tercera_salida/12_pegatinas_decorativas/1-jpeg.jpg",
-      "fotos/tercera_salida/12_pegatinas_decorativas/diseno-de-producto-3-jpeg.jpg"
+      "fotos/tercera_salida/12_pegatinas_decorativas/diseno-de-producto-3-jpeg.jpg",
+      "fotos/tercera_salida/12_pegatinas_decorativas/original-jpeg.jpg"
     ]
   },
   {
@@ -648,7 +626,8 @@
     "fotografia_principal": "fotos/tercera_salida/8_sorpresas_navidenas/1-jpeg.jpg",
     "fotografias": [
       "fotos/tercera_salida/8_sorpresas_navidenas/1-jpeg.jpg",
-      "fotos/tercera_salida/8_sorpresas_navidenas/diseno-de-producto-2-png.jpg"
+      "fotos/tercera_salida/8_sorpresas_navidenas/diseno-de-producto-2-png.jpg",
+      "fotos/tercera_salida/8_sorpresas_navidenas/original-jpeg.jpg"
     ]
   }
 ]

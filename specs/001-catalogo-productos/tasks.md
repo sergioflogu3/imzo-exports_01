@@ -41,3 +41,9 @@ Spec: [`spec.md`](spec.md) · Plan: [`plan.md`](plan.md)
 - [x] **T10. Logo y cabecera centrados.** RF-36
   - Mostrar el logo (o "IMZO" si no hay) al inicio de `app.html`, centrado, con título y bajada también centrados.
   - Hecho cuando: con Chrome a 375 y 1280 px, el logo se ve centrado con un tamaño máximo de 300 × 250 px, el título y la bajada están centrados, no hay scroll horizontal y la consola está limpia.
+
+## Cambio 2026-11-12: copias de fotos reemplazadas (RF-11)
+
+- [x] **T11. Rehacer la copia web cuando cambia la fecha del original.** RF-11
+  - Tests primero de `copiaDesactualizada()` en `carpetas.test.ts`; añadirla a `carpetas.ts`. En `generar-catalogo.ts`, usarla en lugar de `necesitaCopia` y, tras crear cada copia, ponerle la fecha de modificación del original con `utimesSync`.
+  - Hecho cuando: `node --test` está en verde; la primera `npm run catalogo` rehace todas las copias y una segunda no crea ninguna; al cambiar a mano la fecha de una copia de `public/fotos/` (simula una foto reemplazada por otra más antigua), la siguiente generación la rehace; los originales no cambian (mismas sumas de verificación antes y después).

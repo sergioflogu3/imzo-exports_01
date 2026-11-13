@@ -45,3 +45,6 @@ Thumbs.db
 
 # Copias web generadas con npm run catalogo
 /public/fotos/
+
+# Local Netlify folder
+.netlify

@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   analizarCarpeta,
+  copiaDesactualizada,
   esFotoValida,
   nombreCopia,
   nombreVisible,
@@ -144,4 +145,29 @@ test('no falta ninguna carpeta de origen (RF-14)', () => {
     origenesQueFaltan(TRES, () => true),
     [],
   );
+});
+
+// Fechas de modificación en milisegundos, como las da statSync().mtimeMs.
+const ORIGINAL = Date.UTC(2026, 10, 12, 10, 0, 0);
+
+test('sin copia web hay que crearla (RF-11)', () => {
+  assert.equal(copiaDesactualizada(ORIGINAL, null), true);
+});
+
+test('con la misma fecha que el original, la copia está al día (RF-11)', () => {
+  assert.equal(copiaDesactualizada(ORIGINAL, ORIGINAL), false);
+});
+
+test('un original más reciente que su copia la desactualiza (RF-11)', () => {
+  assert.equal(copiaDesactualizada(ORIGINAL + 60_000, ORIGINAL), true);
+});
+
+test('un original reemplazado por otro con fecha anterior también la desactualiza (RF-11)', () => {
+  const fotoAntigua = Date.UTC(2026, 9, 18, 21, 53, 32);
+  assert.equal(copiaDesactualizada(fotoAntigua, ORIGINAL), true);
+});
+
+test('las diferencias dentro del mismo segundo no cuentan (RF-11)', () => {
+  assert.equal(copiaDesactualizada(ORIGINAL + 999.6, ORIGINAL + 0.4), false);
+  assert.equal(copiaDesactualizada(ORIGINAL + 1000, ORIGINAL + 999), true);
 });

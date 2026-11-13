@@ -67,3 +67,13 @@ export function origenesQueFaltan(
 ): string[] {
   return origenes.filter((origen) => !esCarpeta(origen));
 }
+
+/**
+ * true si hay que (re)crear la copia web: no existe o su fecha no coincide, en segundos, con la
+ * del original. La copia guarda la fecha de su original, así que también detecta una foto
+ * reemplazada por otra más antigua (RF-11).
+ */
+export function copiaDesactualizada(mtimeOriginalMs: number, mtimeCopiaMs: number | null): boolean {
+  if (mtimeCopiaMs === null) return true;
+  return Math.floor(mtimeOriginalMs / 1000) !== Math.floor(mtimeCopiaMs / 1000);
+}

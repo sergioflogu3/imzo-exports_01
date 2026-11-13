@@ -14,6 +14,7 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 ## Decisiones (y por qué)
 
 - Todo el código propio en español (principio 6). Catálogo, orden y búsqueda en `.ts` puros, testeados sin Angular (principio 3).
+- Copias web (RF-11 cambiado el 2026-11-12): cada copia guarda la fecha de modificación de su original y se rehace si difieren en segundos. Antes solo se rehacía si el original era más reciente, y una foto reemplazada por otra con fecha antigua (descargada o pegada) dejaba la copia vieja.
 - El precio sale del prefijo de la carpeta. Las carpetas originales no se tocan nunca. Moneda: bolivianos (`Bs. 90`).
 - Sin `1.jpeg`, la portada es la primera foto válida en orden alfabético. Copias web ≤1200 px (≤300 KB).
 - Tests con `node --test` (nativo), sin dependencias (principio 4). `*.test.ts` excluidos en `tsconfig.app.json`.

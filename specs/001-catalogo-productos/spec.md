@@ -50,7 +50,7 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 - RF-8: SI una carpeta de producto válida no tiene `1.jpeg`, ENTONCES EL SISTEMA usa como foto principal la primera foto válida en orden alfabético y la incluye en el resumen como "sin 1.jpeg".
 - RF-9: SI una foto válida está dañada o no se puede leer, ENTONCES EL SISTEMA la salta y la incluye en el resumen como "foto con error".
 - RF-10: SI una carpeta de producto válida no tiene ninguna foto válida que se pueda leer, ENTONCES EL SISTEMA no la añade al catálogo y la incluye en el resumen como "sin fotos".
-- RF-11: CUANDO el administrador ejecuta la generación, EL SISTEMA crea la copia web de cada foto válida que no la tenga o cuyo original sea más reciente que su copia, sin modificar, mover ni renombrar los archivos originales.
+- RF-11: CUANDO el administrador ejecuta la generación, EL SISTEMA crea la copia web de cada foto válida que no la tenga o cuya fecha de modificación, contada en segundos, sea distinta de la que tenía cuando se creó su copia (más reciente o más antigua), sin modificar, mover ni renombrar los archivos originales.
 - RF-12: CUANDO el administrador ejecuta la generación, EL SISTEMA borra las copias web que ya no correspondan a ninguna foto válida de un producto del catálogo.
 - RF-13: SI una carpeta que estaba en el catálogo ya no existe o ya no es válida, y no se trata de un cambio de precio, ENTONCES EL SISTEMA quita su producto del catálogo.
 - RF-14: SI falta alguna de las carpetas de origen, ENTONCES EL SISTEMA detiene la generación con un error y no modifica el catálogo ni las copias web.
@@ -110,6 +110,8 @@ IMZO vende disfraces y accesorios por WhatsApp. Hoy los productos solo existen c
 - Fotos con espacios, paréntesis o puntos en el nombre (`Captura de pantalla … 4.14.06 p. m..png`): se muestran igual.
 - Captura de pantalla horizontal: su copia web tiene 1200 px de ancho como máximo.
 - Foto que se quita de una carpeta que sigue siendo válida: su copia web se borra (RF-12).
+- Foto reemplazada por otra con el mismo nombre y una fecha de modificación anterior (pegada, descargada o descomprimida conservando su fecha): su copia web se rehace (RF-11). Si la foto nueva tuviera exactamente la misma fecha, al segundo, que la anterior, no se detecta: hay que borrar su copia a mano.
+- Primera generación tras el cambio de RF-11 (2026-11-12): las copias existentes no guardan la fecha de su original, así que se rehacen todas una vez.
 - Precio o fotos editados a mano en el catálogo: se sobrescriben en la siguiente generación.
 - El logo aparece dos veces, en la cabecera (RF-36) y en el pie de página (RF-32): es intencionado.
 - Se ha movido o renombrado `primera_salida`: la generación se detiene y el catálogo no se vacía (RF-14).
